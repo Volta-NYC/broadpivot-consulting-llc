@@ -10,38 +10,56 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
+  const isActive = (href: string) =>
+    pathname === href || (href !== "/" && pathname.startsWith(`${href}/`));
+
   return (
-    <header className="sticky top-0 z-50 bg-paper/85 backdrop-blur supports-[backdrop-filter]:bg-paper/70 border-b border-ink-200">
-      <div className="wrap flex h-20 items-center justify-between">
-        <Link href="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
+    <header className="sticky top-0 z-50 bg-paper/85 backdrop-blur supports-[backdrop-filter]:bg-paper/72 border-b border-ink-200/80">
+      <div className="wrap flex h-[68px] items-center justify-between">
+        <Link
+          href="/"
+          className="flex items-center gap-3 group"
+          onClick={() => setOpen(false)}
+        >
           <Image
             src="/images/logo.png"
             alt="BroadPivot Consulting"
             width={36}
             height={36}
-            className="h-9 w-9 object-contain"
+            className="h-8 w-8 object-contain"
             priority
           />
-          <span className="font-serif text-[1.05rem] tracking-tightish text-ink-900">
-            BroadPivot Consulting
+          <span className="font-serif text-[1.02rem] leading-none tracking-tightish text-ink-900">
+            BroadPivot<span className="text-ink-400"> Consulting</span>
           </span>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-1">
           {site.nav.map((n) => {
-            const active = pathname === n.href || pathname.startsWith(`${n.href}/`);
+            const active = isActive(n.href);
             return (
               <Link
                 key={n.href}
                 href={n.href}
-                className={`text-sm transition ${
-                  active ? "text-ink-900" : "text-ink-600 hover:text-ink-900"
+                className={`relative px-3.5 py-2 text-[13px] tracking-tight transition ${
+                  active ? "text-ink-900" : "text-ink-500 hover:text-ink-900"
                 }`}
               >
                 {n.label}
+                <span
+                  className={`pointer-events-none absolute left-3.5 right-3.5 bottom-1 h-px origin-left transition-transform duration-300 ${
+                    active ? "bg-ink-900 scale-x-100" : "bg-ink-900 scale-x-0"
+                  }`}
+                />
               </Link>
             );
           })}
+          <Link
+            href="/contact"
+            className="ml-3 inline-flex items-center gap-2 border border-ink-900 px-4 py-2 text-[12.5px] font-medium tracking-tight text-ink-900 transition hover:bg-ink-900 hover:text-paper"
+          >
+            Start a conversation
+          </Link>
         </nav>
 
         <button
@@ -50,7 +68,15 @@ export default function Header() {
           onClick={() => setOpen((v) => !v)}
           className="md:hidden p-2 -mr-2 text-ink-900"
         >
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round">
+          <svg
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+          >
             {open ? (
               <>
                 <line x1="18" y1="6" x2="6" y2="18" />
@@ -68,17 +94,25 @@ export default function Header() {
 
       {open && (
         <div className="md:hidden border-t border-ink-200 bg-paper">
-          <div className="wrap py-4 flex flex-col">
+          <div className="wrap py-3 flex flex-col">
             {site.nav.map((n) => (
               <Link
                 key={n.href}
                 href={n.href}
                 onClick={() => setOpen(false)}
-                className="py-3 text-base text-ink-800 border-b border-ink-100 last:border-0"
+                className="py-3 text-base text-ink-800 border-b border-ink-100 last:border-0 flex items-center justify-between"
               >
-                {n.label}
+                <span>{n.label}</span>
+                <span className="text-ink-400">→</span>
               </Link>
             ))}
+            <Link
+              href="/contact"
+              onClick={() => setOpen(false)}
+              className="mt-4 mb-4 inline-flex items-center justify-center gap-2 border border-ink-900 bg-ink-900 px-5 py-3 text-sm text-paper"
+            >
+              Start a conversation
+            </Link>
           </div>
         </div>
       )}

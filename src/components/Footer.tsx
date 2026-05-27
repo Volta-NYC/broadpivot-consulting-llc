@@ -1,49 +1,90 @@
 import Link from "next/link";
+import Image from "next/image";
 import { site } from "@/lib/site";
 
 export default function Footer() {
   return (
-    <footer className="mt-32 border-t border-ink-200">
-      <div className="wrap py-16 grid gap-12 md:grid-cols-12">
-        <div className="md:col-span-5">
-          <div className="font-serif text-2xl tracking-tightish text-ink-900">
-            BroadPivot Consulting LLC
+    <footer className="mt-24 border-t border-ink-200 bg-paperDeep/50">
+      {/* Big serif statement */}
+      <div className="wrap pt-20 lg:pt-24 pb-16">
+        <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-7">
+            <div className="flex items-center gap-3">
+              <Image
+                src="/images/logo.png"
+                alt=""
+                width={36}
+                height={36}
+                className="h-8 w-8 object-contain"
+              />
+              <span className="font-serif text-[1.05rem] tracking-tightish text-ink-900">
+                BroadPivot<span className="text-ink-400"> Consulting</span>
+              </span>
+            </div>
+            <p className="mt-8 font-serif text-[1.6rem] sm:text-[1.85rem] leading-[1.18] tracking-tightish text-ink-900 max-w-3xl">
+              Compliance, risk, and cybersecurity work that auditors, regulators,
+              and customers can actually <span className="italic text-ink-600">rely on.</span>
+            </p>
+            <div className="mt-10">
+              <Link href="/contact" className="btn">Start a conversation</Link>
+            </div>
           </div>
-          <p className="mt-3 text-sm text-ink-600 max-w-sm leading-relaxed">
-            {site.description}
-          </p>
-        </div>
 
-        <div className="md:col-span-3">
-          <div className="eyebrow">Navigation</div>
-          <ul className="mt-4 space-y-2 text-sm text-ink-700">
-            {site.nav.map((n) => (
-              <li key={n.href}>
-                <Link href={n.href} className="hover:text-ink-900 transition">
-                  {n.label}
-                </Link>
+          <div className="lg:col-span-5 grid grid-cols-2 gap-10">
+            <div>
+              <div className="idx">Navigate</div>
+              <ul className="mt-5 space-y-2.5 text-[14.5px] text-ink-700">
+                {site.nav.map((n) => (
+                  <li key={n.href}>
+                    <Link href={n.href} className="hover:text-ink-900 transition">
+                      {n.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <div className="idx">Contact</div>
+              <ul className="mt-5 space-y-2.5 text-[14.5px] text-ink-700">
+                <li>
+                  <a
+                    href={`mailto:${site.email}`}
+                    className="hover:text-ink-900 transition"
+                  >
+                    {site.email}
+                  </a>
+                </li>
+                <li className="text-ink-500">United States</li>
+                <li className="text-ink-500">Response within 1 business day</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Framework strip */}
+      <div className="border-t border-ink-200">
+        <div className="wrap py-5 flex flex-wrap gap-x-6 gap-y-2 items-center">
+          <span className="mono-label">Frameworks</span>
+          <ul className="flex flex-wrap gap-x-4 gap-y-1 text-[12.5px] font-serif tracking-tightish text-ink-600">
+            {site.frameworks.map((f, i) => (
+              <li key={f} className="flex items-center gap-4">
+                {i > 0 && <span className="text-ink-300">·</span>}
+                <span>{f}</span>
               </li>
             ))}
-          </ul>
-        </div>
-
-        <div className="md:col-span-4">
-          <div className="eyebrow">Contact</div>
-          <ul className="mt-4 space-y-2 text-sm text-ink-700">
-            <li>
-              <a href={`mailto:${site.email}`} className="hover:text-ink-900 transition">
-                {site.email}
-              </a>
-            </li>
-            <li className="text-ink-500">United States</li>
           </ul>
         </div>
       </div>
 
       <div className="border-t border-ink-200">
-        <div className="wrap py-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-xs text-ink-500">
-          <div>© {new Date().getFullYear()} BroadPivot Consulting LLC.</div>
-          <div>{site.domain}</div>
+        <div className="wrap py-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-[12px] text-ink-500">
+          <div>© {new Date().getFullYear()} BroadPivot Consulting LLC. All rights reserved.</div>
+          <div className="flex items-center gap-5">
+            <span>{site.domain}</span>
+            <span className="text-ink-300">·</span>
+            <span>Confidential by default</span>
+          </div>
         </div>
       </div>
     </footer>

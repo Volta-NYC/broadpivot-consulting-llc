@@ -10,19 +10,33 @@ export const site = {
   nav: [
     { label: "About", href: "/about" },
     { label: "Capabilities", href: "/capabilities" },
-    { label: "Government Contracting", href: "/government-contracting" },
+    { label: "Government", href: "/government-contracting" },
     { label: "Contact", href: "/contact" },
+  ],
+  frameworks: [
+    "NIST 800-171",
+    "NIST 800-53",
+    "CMMC",
+    "FAR / DFARS",
+    "FedRAMP",
+    "HIPAA",
+    "HITRUST",
+    "SOC 2",
+    "ISO 27001",
+    "SOX",
+    "PCI-DSS",
+    "GDPR",
   ],
   whoWeServe: [
     {
-      title: "Small to mid-sized organizations",
+      title: "Growing organizations",
       blurb:
-        "Senior compliance, risk, and security leadership without the cost of a full-time hire.",
+        "Senior compliance, risk, and security leadership at a fraction of the cost of a full-time hire.",
     },
     {
-      title: "Government and public sector partners",
+      title: "Public sector partners",
       blurb:
-        "Subject-matter expertise on regulated programs and contract performance.",
+        "Subject-matter expertise on regulated programs, contract performance, and pre-award positioning.",
     },
     {
       title: "Regulated industries",
@@ -34,7 +48,7 @@ export const site = {
     {
       title: "Compliance & Risk Management",
       summary:
-        "Program design, control assessments, and audit readiness for HIPAA, SOX, PCI-DSS, NIST 800-53/171, and ISO 27001.",
+        "Program design, control assessments, and audit readiness for HIPAA, SOX, PCI-DSS, NIST 800-53 / 171, and ISO 27001.",
       points: [
         "Regulatory gap assessments and remediation roadmaps",
         "Internal control design and testing",
@@ -74,6 +88,45 @@ export const site = {
         "KPI and control monitoring frameworks",
         "Change management and training",
       ],
+    },
+  ],
+  outcomes: [
+    {
+      figure: "1",
+      unit: "senior practitioner",
+      detail: "leads every engagement — never delegated to a junior team.",
+    },
+    {
+      figure: "12+",
+      unit: "regulatory frameworks",
+      detail: "actively operated across healthcare, finance, and federal work.",
+    },
+    {
+      figure: "10",
+      unit: "years",
+      detail: "of in-the-room experience with auditors, regulators, and contracting officers.",
+    },
+  ],
+  principles: [
+    {
+      title: "Senior judgment",
+      body:
+        "Every engagement is staffed and led by a practitioner who has been accountable for the work — not a delegate translating notes from one.",
+    },
+    {
+      title: "Right-sized programs",
+      body:
+        "Controls are scaled to the actual risk and stage of the organization. We refuse to ship enterprise-weight processes to a thirty-person company.",
+    },
+    {
+      title: "Documentation that holds",
+      body:
+        "Policies, evidence, and process maps that survive turnover, scale with growth, and stand up to audit, regulator, and customer scrutiny.",
+    },
+    {
+      title: "Quiet partnership",
+      body:
+        "We work as an embedded extension of your team. No theatrical reporting cycles. No invented urgency. Steady, expert delivery.",
     },
   ],
 } as const;
