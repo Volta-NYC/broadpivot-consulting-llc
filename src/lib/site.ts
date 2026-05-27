@@ -46,7 +46,7 @@ export const site = {
   ],
   capabilities: [
     {
-      title: "Compliance & Risk Management",
+      title: "Compliance and Risk Management",
       summary:
         "Program design, control assessments, and audit readiness for HIPAA, SOX, PCI-DSS, NIST 800-53 / 171, and ISO 27001.",
       points: [
@@ -57,9 +57,9 @@ export const site = {
       ],
     },
     {
-      title: "Cybersecurity & Data Protection",
+      title: "Cybersecurity and Data Protection",
       summary:
-        "Security programs sized to the business — from data governance to incident response readiness.",
+        "Security programs sized to the business, from data governance to incident response readiness.",
       points: [
         "Security program assessment and maturity roadmaps",
         "Data classification, privacy, and protection",
@@ -94,7 +94,7 @@ export const site = {
     {
       figure: "1",
       unit: "senior practitioner",
-      detail: "leads every engagement — never delegated to a junior team.",
+      detail: "leads every engagement. Never delegated to a junior team.",
     },
     {
       figure: "12+",
@@ -111,7 +111,7 @@ export const site = {
     {
       title: "Senior judgment",
       body:
-        "Every engagement is staffed and led by a practitioner who has been accountable for the work — not a delegate translating notes from one.",
+        "Every engagement is staffed and led by a practitioner who has been accountable for the work, not a delegate translating notes from one.",
     },
     {
       title: "Right-sized programs",

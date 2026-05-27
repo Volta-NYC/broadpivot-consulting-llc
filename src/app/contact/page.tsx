@@ -9,22 +9,25 @@ export default function ContactPage() {
       {/* HERO */}
       <section className="relative overflow-hidden border-b border-ink-200/80">
         <BlueprintBackdrop />
-        <div className="wrap pt-20 sm:pt-28 lg:pt-32 pb-16 lg:pb-20">
+
+        <div className="wrap pt-20 sm:pt-24 lg:pt-28 pb-16 lg:pb-20">
           <div className="flex items-center gap-3">
             <span className="h-px w-10 bg-ink-400" />
             <span className="eyebrow">Contact</span>
           </div>
-          <div className="mt-7 grid gap-10 lg:grid-cols-12 lg:gap-16 items-end">
-            <h1 className="display lg:col-span-8 max-w-[16ch]">
-              Let&apos;s discuss
-              <br />
-              <span className="italic text-ink-700">what&apos;s on your roadmap.</span>
-            </h1>
-            <p className="lede lg:col-span-4 max-w-md">
-              Share a few details about your environment and goals. We respond within
-              one business day, confidentially.
-            </p>
-          </div>
+
+          <h1 className="display mt-8 max-w-[16ch]">
+            Let&apos;s discuss
+            {" "}
+            <span className="italic text-ink-700 leading-[1.1] pb-1 inline-block">
+              what&apos;s on your roadmap.
+            </span>
+          </h1>
+
+          <p className="lede mt-8 max-w-2xl">
+            Share a few details about your environment and goals. We respond
+            within one business day, confidentially.
+          </p>
         </div>
       </section>
 
@@ -58,17 +61,17 @@ export default function ContactPage() {
                   className="mt-3 w-full bg-transparent border-b border-ink-300 py-3 text-[15px] text-ink-900 focus:border-ink-900 focus:outline-none"
                 >
                   <option value="" disabled>Select one</option>
-                  <option>Compliance &amp; Risk Management</option>
-                  <option>Cybersecurity &amp; Data Protection</option>
+                  <option>Compliance and Risk Management</option>
+                  <option>Cybersecurity and Data Protection</option>
                   <option>Government Contracting Readiness</option>
                   <option>Business Process Optimization</option>
-                  <option>Not sure yet — let&apos;s discuss</option>
+                  <option>Not sure yet. Let&apos;s discuss.</option>
                 </select>
               </div>
 
               <div>
                 <label className="eyebrow" htmlFor="message">
-                  How can we help?
+                  How can we help
                 </label>
                 <textarea
                   id="message"
@@ -97,29 +100,30 @@ export default function ContactPage() {
 
           <aside className="lg:col-span-5 lg:pl-10 lg:border-l lg:border-ink-200 space-y-12">
             <div>
-              <div className="idx">Direct</div>
+              <div className="mono-label">Direct</div>
               <a
                 href={`mailto:${site.email}`}
-                className="mt-3 block font-serif text-xl tracking-tightish text-ink-900 hover:text-ink-700 transition"
+                className="mt-3 block font-serif text-xl tracking-tightish text-ink-900 hover:text-ink-700"
+                style={{ transition: "color 200ms var(--ease-drawer)" }}
               >
                 {site.email}
               </a>
             </div>
             <div>
-              <div className="idx">Location</div>
+              <div className="mono-label">Location</div>
               <p className="mt-3 text-ink-700 text-[15px]">
-                United States — remote-first, on-site when the engagement calls for it.
+                United States. Remote-first, on-site when the engagement calls for it.
               </p>
             </div>
             <div>
-              <div className="idx">Response</div>
+              <div className="mono-label">Response</div>
               <p className="mt-3 text-ink-700 text-[15px]">Within one business day.</p>
             </div>
             <div>
-              <div className="idx">Confidentiality</div>
+              <div className="mono-label">Confidentiality</div>
               <p className="mt-3 text-ink-700 text-[15px]">
-                Inbound inquiries are treated as confidential by default. NDAs are
-                available on request before substantive discussion.
+                Inbound inquiries are treated as confidential by default. NDAs
+                are available on request before substantive discussion.
               </p>
             </div>
           </aside>

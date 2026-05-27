@@ -5,7 +5,6 @@ import { site } from "@/lib/site";
 export default function Footer() {
   return (
     <footer className="mt-24 border-t border-ink-200 bg-paperDeep/50">
-      {/* Big serif statement */}
       <div className="wrap pt-20 lg:pt-24 pb-16">
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-7">
@@ -22,8 +21,12 @@ export default function Footer() {
               </span>
             </div>
             <p className="mt-8 font-serif text-[1.6rem] sm:text-[1.85rem] leading-[1.18] tracking-tightish text-ink-900 max-w-3xl">
-              Compliance, risk, and cybersecurity work that auditors, regulators,
-              and customers can actually <span className="italic text-ink-600">rely on.</span>
+              Compliance, risk, and cybersecurity work that auditors,
+              regulators, and customers can actually
+              {" "}
+              <span className="italic text-ink-600 leading-[1.1] pb-1 inline-block">
+                rely on.
+              </span>
             </p>
             <div className="mt-10">
               <Link href="/contact" className="btn">Start a conversation</Link>
@@ -32,11 +35,15 @@ export default function Footer() {
 
           <div className="lg:col-span-5 grid grid-cols-2 gap-10">
             <div>
-              <div className="idx">Navigate</div>
+              <div className="mono-label">Navigate</div>
               <ul className="mt-5 space-y-2.5 text-[14.5px] text-ink-700">
                 {site.nav.map((n) => (
                   <li key={n.href}>
-                    <Link href={n.href} className="hover:text-ink-900 transition">
+                    <Link
+                      href={n.href}
+                      className="hover:text-ink-900"
+                      style={{ transition: "color 200ms var(--ease-drawer)" }}
+                    >
                       {n.label}
                     </Link>
                   </li>
@@ -44,12 +51,13 @@ export default function Footer() {
               </ul>
             </div>
             <div>
-              <div className="idx">Contact</div>
+              <div className="mono-label">Contact</div>
               <ul className="mt-5 space-y-2.5 text-[14.5px] text-ink-700">
                 <li>
                   <a
                     href={`mailto:${site.email}`}
-                    className="hover:text-ink-900 transition"
+                    className="hover:text-ink-900"
+                    style={{ transition: "color 200ms var(--ease-drawer)" }}
                   >
                     {site.email}
                   </a>
@@ -59,21 +67,6 @@ export default function Footer() {
               </ul>
             </div>
           </div>
-        </div>
-      </div>
-
-      {/* Framework strip */}
-      <div className="border-t border-ink-200">
-        <div className="wrap py-5 flex flex-wrap gap-x-6 gap-y-2 items-center">
-          <span className="mono-label">Frameworks</span>
-          <ul className="flex flex-wrap gap-x-4 gap-y-1 text-[12.5px] font-serif tracking-tightish text-ink-600">
-            {site.frameworks.map((f, i) => (
-              <li key={f} className="flex items-center gap-4">
-                {i > 0 && <span className="text-ink-300">·</span>}
-                <span>{f}</span>
-              </li>
-            ))}
-          </ul>
         </div>
       </div>
 
