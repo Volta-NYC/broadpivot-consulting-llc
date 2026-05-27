@@ -1,62 +1,63 @@
-# Purpose
-This repository is the base template that should be used for all future businesses, including basic files such as navbar, footer, and other configs.
+# BroadPivot Consulting LLC — Website
 
-# Business Name
+Modern Next.js 15 + TypeScript + Tailwind site for BroadPivot Consulting LLC.
 
-Replace this README with business-specific details.
-
----
-
-## 🚀 Overview
-
-Short description of the business and what this website is for.
-
-Example:
-"This website serves as the official online presence for [Business Name], showcasing services, contact information, and brand identity."
-
----
-
-## 🛠 Tech Stack
-
-- Next.js (App Router)
-- TypeScript
-- Tailwind CSS
-- Hosted on Vercel
-
----
-
-## 📂 Project Structure
-
-- `src/app` → App Router (homepage, layout, globals)
-- `src/app/pages` → Site pages (About, Contact, etc.)
-- `src/lib/components` → Shared UI components (Navbar/Footer)
-- `public` → Static assets
-
----
-
-## 🧑‍💻 Development
-
-Install dependencies:
+## Local development
 
 ```bash
 npm install
-npm install --save-dev @types/react
+npm run dev          # http://localhost:3000
 ```
 
-Run locally:
+## Deploy to Vercel
+
+### Option A — Import via the Vercel dashboard
+
+1. Push this repo to GitHub.
+2. In Vercel: **Add New → Project → Import** the repo.
+3. Framework preset auto-detects as **Next.js**. Click **Deploy**.
+
+### Option B — Vercel CLI
 
 ```bash
-npm run dev
+npm i -g vercel
+vercel              # follow prompts
+vercel --prod       # production deploy
 ```
 
----
+No environment variables are required.
 
-## ✏️ Customization Checklist
+## Stack
 
-- [ ] Replace Business Name in navbar + footer
-- [ ] Update metadata in `src/app/layout.tsx`
-- [ ] Replace homepage content (`src/app/page.tsx`)
-- [ ] Update About + Contact pages (`src/app/pages/*`)
-- [ ] Replace favicon + assets in `public/`
-- [ ] Update SEO metadata
-- [ ] (Optional) Update Volta credit link text / URL in the footer
+- Next.js 15 (App Router, static export-friendly)
+- React 19
+- TypeScript
+- Tailwind CSS 3
+- All pages prerender statically
+
+## Structure
+
+```
+.
+├── src/
+│   ├── app/                  # App Router pages
+│   │   ├── page.tsx          # Home
+│   │   ├── about/
+│   │   ├── capabilities/
+│   │   ├── government-contracting/
+│   │   ├── contact/
+│   │   ├── layout.tsx
+│   │   └── globals.css
+│   ├── components/           # Header, Footer, Hex icon
+│   └── lib/site.ts           # Centralized site content (single source of truth)
+├── public/images/            # Logo + assets (no external CDN dependencies)
+├── tailwind.config.ts
+├── postcss.config.js
+├── next.config.mjs
+├── vercel.json
+└── tsconfig.json
+```
+
+## Editing content
+
+All site copy (nav, capabilities, services, contact info) lives in `src/lib/site.ts`.
