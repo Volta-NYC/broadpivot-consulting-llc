@@ -1,12 +1,18 @@
 export const site = {
   name: "BroadPivot Consulting LLC",
   shortName: "BroadPivot",
-  tagline: "Exceptional Expertise. Trusted Outcomes.",
+  tagline: "Pivot with Purpose.",
   description:
-    "BroadPivot Consulting LLC is a compliance, risk, and cybersecurity practice serving healthcare, financial services, technology, and the public sector.",
+    "BroadPivot Consulting LLC provides strategic consulting in compliance, risk management, business operations, nonprofit leadership, project coordination, construction management, and government contracting — helping organizations structure, adapt, and move forward with purpose.",
   domain: "broadpivotllc.com",
   url: "https://broadpivotllc.com",
   email: "info@broadpivotllc.com",
+  practitioner: {
+    name: "Melodye Harvey",
+    credential: "CIA",
+    title: "Principal Consultant & Founder",
+    bio: "Melodye Harvey is a Certified Internal Auditor (CIA) with extensive experience across compliance, privacy, audit, information security, healthcare, nonprofit leadership, business operations, and project coordination. She founded BroadPivot to help organizations pivot with purpose — bringing structure, strategy, and hands-on execution support to businesses, nonprofits, and public-sector partners of all sizes.",
+  },
   nav: [
     { label: "About", href: "/about" },
     { label: "Capabilities", href: "/capabilities" },
@@ -25,108 +31,151 @@ export const site = {
     "ISO 27001",
     "SOX",
     "PCI-DSS",
+    "IIA Standards",
+    "2 CFR Part 200",
+    "OMB A-133",
     "GDPR",
+    "CCPA",
   ],
   whoWeServe: [
     {
-      title: "Growing organizations",
+      title: "Businesses of all sizes",
       blurb:
-        "Senior compliance, risk, and security leadership at a fraction of the cost of a full-time hire.",
+        "From growing small businesses to established enterprises — strategic consulting on operations, compliance, and risk that scales with your goals and stage.",
     },
     {
-      title: "Public sector partners",
+      title: "Nonprofits & mission-driven organizations",
       blurb:
-        "Subject-matter expertise on regulated programs, contract performance, and pre-award positioning.",
+        "Governance, grant compliance, audit readiness, and operational structure that lets nonprofits focus energy where it matters most: their mission.",
     },
     {
-      title: "Regulated industries",
+      title: "Public sector & government contractors",
       blurb:
-        "Healthcare, financial services, and technology operators in demanding regulatory environments.",
+        "Pre-award positioning, compliance foundations, and performance support for federal, state, and local contracting opportunities.",
+    },
+    {
+      title: "Construction & project-based businesses",
+      blurb:
+        "Project coordination, contract compliance, and operational frameworks that keep complex, multi-phase work on track and audit-ready.",
     },
   ],
   capabilities: [
     {
-      title: "Compliance and Risk Management",
+      title: "Compliance & Risk Management",
       summary:
-        "Program design, control assessments, and audit readiness for HIPAA, SOX, PCI-DSS, NIST 800-53 / 171, and ISO 27001.",
+        "Rigorous program design, internal audit, and regulatory readiness — led by a Certified Internal Auditor with hands-on experience across HIPAA, SOX, NIST, privacy law, and more.",
       points: [
         "Regulatory gap assessments and remediation roadmaps",
-        "Internal control design and testing",
+        "Internal audit planning, execution, and reporting (CIA-led)",
         "Third-party and vendor risk management",
+        "Privacy program development and data governance",
         "Policy, procedure, and evidence frameworks",
+        "Control design, testing, and ongoing monitoring",
       ],
     },
     {
-      title: "Cybersecurity and Data Protection",
+      title: "Business Operations & Process Improvement",
       summary:
-        "Security programs sized to the business, from data governance to incident response readiness.",
+        "Workflows, systems, and documentation that bring structure, clarity, and sustainability to how your organization actually runs — at any scale.",
       points: [
-        "Security program assessment and maturity roadmaps",
-        "Data classification, privacy, and protection",
-        "Incident response planning and tabletop exercises",
-        "Cloud and identity controls review",
+        "Process mapping and operational redesign",
+        "Standard operating procedures (SOPs) and documentation",
+        "KPI frameworks and performance monitoring",
+        "Change management and staff training support",
+        "Organizational structure and governance alignment",
+        "Business continuity and resilience planning",
+      ],
+    },
+    {
+      title: "Nonprofit & Mission-Driven Organization Support",
+      summary:
+        "Strategic and operational support for nonprofits, foundations, and mission-driven organizations navigating leadership, compliance requirements, and growth.",
+      points: [
+        "Nonprofit governance and board relations support",
+        "Grant compliance and federal award management (2 CFR Part 200)",
+        "Single Audit / OMB A-133 readiness",
+        "Strategic planning and initiative execution",
+        "Organizational capacity-building and leadership support",
+        "Internal controls for nonprofit environments",
+      ],
+    },
+    {
+      title: "Project & Construction Management",
+      summary:
+        "Coordination, compliance, and operational support for project-based businesses and construction teams — from planning and permitting through delivery and close-out.",
+      points: [
+        "Project planning, scheduling, and coordination",
+        "Contract compliance and documentation management",
+        "Subcontractor management frameworks",
+        "Risk identification and mitigation planning",
+        "Regulatory and permitting compliance support",
+        "Project close-out and lessons-learned documentation",
       ],
     },
     {
       title: "Government Contracting Readiness",
       summary:
-        "Positioning, compliance, and pursuit support for federal, state, and local opportunities.",
+        "Positioning, compliance, and pursuit support for federal, state, and local opportunities — from initial registration through award and contract performance.",
       points: [
-        "SAM.gov, UEI, and capability statement preparation",
+        "SAM.gov, UEI, and NAICS code alignment",
+        "Capability statement development and positioning",
         "FAR / DFARS and NIST 800-171 readiness",
         "Small-business certifications guidance",
-        "Proposal and capture support",
+        "Proposal development and capture support",
+        "Contract performance and compliance monitoring",
       ],
     },
     {
-      title: "Business Process Optimization",
+      title: "Cybersecurity & Information Security",
       summary:
-        "Workflows, documentation, and controls that hold up under audit and growth.",
+        "Security programs and data protection strategies right-sized for the organization — from policy frameworks to technical control reviews.",
       points: [
-        "Process mapping and risk-aligned redesign",
-        "Operational documentation and SOPs",
-        "KPI and control monitoring frameworks",
-        "Change management and training",
+        "Security program assessment and maturity roadmaps",
+        "Data classification, privacy, and protection",
+        "Information security policy development",
+        "Incident response planning and tabletop exercises",
+        "Cloud and identity controls review",
+        "Security awareness and training programs",
       ],
     },
   ],
   outcomes: [
     {
-      figure: "1",
-      unit: "senior practitioner",
-      detail: "leads every engagement. Never delegated to a junior team.",
+      figure: "CIA",
+      unit: "Certified Internal Auditor",
+      detail: "Rigorous, credentialed audit and risk expertise applied directly to every engagement.",
     },
     {
-      figure: "12+",
-      unit: "regulatory frameworks",
-      detail: "actively operated across healthcare, finance, and federal work.",
+      figure: "10+",
+      unit: "years of experience",
+      detail: "Across compliance, nonprofit leadership, business operations, healthcare, and government contracting.",
     },
     {
-      figure: "10",
-      unit: "years",
-      detail: "of in-the-room experience with auditors, regulators, and contracting officers.",
+      figure: "6",
+      unit: "practice areas",
+      detail: "Compliance, operations, nonprofit, project & construction, government contracting, and cybersecurity.",
     },
   ],
   principles: [
     {
-      title: "Senior judgment",
+      title: "Pivot with purpose",
       body:
-        "Every engagement is staffed and led by a practitioner who has been accountable for the work, not a delegate translating notes from one.",
+        "BroadPivot was built on the belief that organizations can move decisively — with the right structure, strategy, and support in place. Every engagement is designed to help you move forward with clarity.",
     },
     {
-      title: "Right-sized programs",
+      title: "Senior, hands-on delivery",
       body:
-        "Controls are scaled to the actual risk and stage of the organization. We refuse to ship enterprise-weight processes to a thirty-person company.",
+        "Every engagement is led by Melodye Harvey, CIA, directly. No delegates, no hand-offs to junior staff. You work with the practitioner doing the work.",
     },
     {
-      title: "Documentation that holds",
+      title: "Adaptable and right-sized",
       body:
-        "Policies, evidence, and process maps that survive turnover, scale with growth, and stand up to audit, regulator, and customer scrutiny.",
+        "Solutions are scaled to the real risk, resources, and goals of the organization — not a template lifted from a larger firm and dropped on a smaller one.",
     },
     {
-      title: "Quiet partnership",
+      title: "Trusted partnership",
       body:
-        "We work as an embedded extension of your team. No theatrical reporting cycles. No invented urgency. Steady, expert delivery.",
+        "BroadPivot works as an embedded extension of your team, with steady expert delivery, no theatrical reporting cycles, and a quiet commitment to your success.",
     },
   ],
 } as const;
