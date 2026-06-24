@@ -1,12 +1,16 @@
 import Link from "next/link";
+import Image from "next/image";
 import { site } from "@/lib/site";
 import { BlueprintBackdrop, DarkPlate } from "@/components/Backdrop";
 
-// IMAGES TODO: This site currently ships with no photography. When real
-// brand assets are available (practitioner portrait, office or archival
-// detail shots, document close-ups under controlled lighting), drop them
-// into /public/images and wire them into the Hero, Approach, and
-// Closing sections.
+const serviceIcons: Record<string, string> = {
+  "Compliance & Risk Management": "⚖️",
+  "Business Operations & Process Improvement": "⚙️",
+  "Nonprofit & Mission-Driven Organization Support": "🤝",
+  "Project & Construction Management": "🏗️",
+  "Government Contracting Readiness": "🏛️",
+  "Cybersecurity & Information Security": "🔐",
+};
 
 export default function Home() {
   return (
@@ -15,41 +19,90 @@ export default function Home() {
       <section className="relative overflow-hidden border-b border-ink-200/80">
         <BlueprintBackdrop />
 
-        <div className="wrap pt-20 sm:pt-24 lg:pt-28 pb-20 lg:pb-28 hero-drift">
-          <div className="flex items-center gap-3">
-            <span className="h-px w-10 bg-ink-400" />
-            <span className="eyebrow">A compliance and risk practice. United States.</span>
-          </div>
+        <div className="wrap pt-16 sm:pt-20 lg:pt-24 pb-0">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-end">
 
-          <h1 className="display mt-8 max-w-[15ch]">
-            Compliance work that
-            {" "}
-            <span className="italic text-ink-700 leading-[1.1] pb-1 inline-block">
-              earns the room.
-            </span>
-          </h1>
+            {/* LEFT: text content */}
+            <div className="pb-20 lg:pb-28 hero-drift">
+              <div className="flex flex-wrap items-center gap-3">
+                <span className="h-px w-10 bg-accent-warm" />
+                <span className="eyebrow">Pivot with Purpose · United States</span>
+                <span className="credential-badge ml-2">
+                  <span className="credential-badge__label">CIA</span>
+                  <span className="credential-badge__divider" />
+                  <span className="credential-badge__text">Certified Internal Auditor</span>
+                </span>
+              </div>
 
-          <p className="lede mt-8 max-w-xl">
-            BroadPivot partners with healthcare, financial services, technology,
-            and public sector teams to translate regulatory complexity into
-            programs that actually operate.
-          </p>
+              <h1 className="display mt-8 max-w-[14ch]">
+                Consulting that moves your
+                {" "}
+                <span className="italic text-ink-700 leading-[1.1] pb-1 inline-block">
+                  organization forward.
+                </span>
+              </h1>
 
-          <div className="mt-10 flex flex-wrap items-center gap-4">
-            <Link href="/contact" className="btn">
-              Start a conversation
-            </Link>
-            <Link href="/capabilities" className="btn-quiet">
-              See the practice areas
-            </Link>
+              <p className="lede mt-8 max-w-xl">
+                BroadPivot partners with businesses, nonprofits, public-sector
+                organizations, and project-based teams to build stronger operations,
+                navigate compliance, coordinate complex initiatives, and position
+                for sustainable growth.
+              </p>
+
+              <div className="mt-10 flex flex-wrap items-center gap-4">
+                <Link href="/contact" className="btn">
+                  Start a conversation
+                </Link>
+                <Link href="/capabilities" className="btn-quiet">
+                  See the practice areas
+                </Link>
+              </div>
+
+              <div className="mt-10 flex flex-wrap gap-2">
+                {["Compliance", "Nonprofits", "Operations", "Gov Contracting", "Construction", "Cybersecurity"].map((tag) => (
+                  <span key={tag} className="pill">{tag}</span>
+                ))}
+              </div>
+            </div>
+
+            {/* RIGHT: Melodye's headshot */}
+            <div className="hidden lg:flex justify-center lg:justify-end items-end">
+              <div className="photo-frame relative" style={{ maxWidth: 400 }}>
+                <Image
+                  src="/images/melodye-harvey.png"
+                  alt="Melodye Harvey, CIA — Principal Consultant & Founder, BroadPivot Consulting LLC"
+                  width={400}
+                  height={500}
+                  className="object-cover object-top w-full"
+                  style={{ display: "block", maxHeight: 500, objectPosition: "top center" }}
+                  priority
+                />
+                <div
+                  className="absolute bottom-0 left-0 right-0 px-6 py-5"
+                  style={{
+                    background: "linear-gradient(to top, rgba(14,13,10,0.88) 0%, rgba(14,13,10,0.4) 70%, transparent 100%)",
+                  }}
+                >
+                  <div className="font-serif text-[1.05rem] tracking-tightish text-paper leading-tight">
+                    Melodye Harvey, CIA
+                  </div>
+                  <div
+                    className="font-mono text-[10px] uppercase tracking-[0.18em] mt-1"
+                    style={{ color: "#b3ab93" }}
+                  >
+                    Principal Consultant & Founder
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Framework strip, single marquee on the page */}
+        {/* Framework marquee strip */}
         <div className="border-t border-ink-200/80 bg-paper/60">
           <div className="wrap py-5 flex items-center gap-10">
             <div className="hidden md:block mono-label whitespace-nowrap">
-              Operating across
+              Frameworks & standards
             </div>
             <div className="marquee flex-1">
               <ul className="marquee__track">
@@ -67,82 +120,117 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ============ 2. PRACTICE AREAS — vertical stacked headline, numbered rows */}
-      {/* Layout family: vertical headline + full-width numbered rows */}
+      {/* ============ 2. PIVOT WITH PURPOSE — brand statement ============== */}
+      <section className="border-b border-ink-200/80 bg-paperDeep/50">
+        <div className="wrap py-16 lg:py-20">
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+            <div className="lg:col-span-5">
+              <div className="flex items-center gap-3">
+                <span className="h-px w-8 bg-accent-warm" />
+                <span className="eyebrow">Our philosophy</span>
+              </div>
+              <h2 className="display-sm mt-6">
+                Pivot with{" "}
+                <span className="italic text-ink-600">Purpose.</span>
+              </h2>
+            </div>
+            <div className="lg:col-span-7">
+              <p className="font-serif text-[1.2rem] text-ink-700 leading-[1.6] tracking-tightish">
+                Many organizations have the goals, the ideas, and the responsibilities in place —
+                but need support organizing the work, managing risk, strengthening operations,
+                and building systems that are sustainable. BroadPivot provides flexible,
+                strategic, and hands-on consulting support to help organizations move forward
+                with clarity and confidence.
+              </p>
+              <div className="mt-8 grid sm:grid-cols-2 gap-4">
+                {[
+                  { label: "Structure", desc: "Clear processes and documentation" },
+                  { label: "Strategy", desc: "Plans aligned to your goals" },
+                  { label: "Adaptability", desc: "Solutions scaled to your reality" },
+                  { label: "Execution", desc: "Hands-on support that delivers" },
+                ].map((item) => (
+                  <div key={item.label} className="flex items-start gap-3">
+                    <div
+                      className="flex-shrink-0 rounded-full w-1.5 h-1.5"
+                      style={{ background: "var(--accent-warm)", marginTop: "0.45rem" }}
+                    />
+                    <div>
+                      <div className="font-serif text-[0.95rem] tracking-tightish text-ink-900">{item.label}</div>
+                      <div className="text-[13.5px] text-ink-500 mt-0.5">{item.desc}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============ 3. PRACTICE AREAS — 6-up card grid ================== */}
       <section className="border-b border-ink-200/80">
         <div className="wrap py-24 lg:py-32">
+          <div className="flex items-center gap-3 mb-6">
+            <span className="h-px w-8 bg-ink-400" />
+            <span className="eyebrow">Practice areas</span>
+          </div>
           <h2 className="display-sm max-w-3xl">
-            Four disciplines, led by a single senior practitioner.
+            Six disciplines. One trusted
+            {" "}
+            <span className="italic text-ink-600">consulting partner.</span>
           </h2>
           <p className="mt-6 text-ink-600 leading-relaxed max-w-2xl">
-            Each engagement is staffed by the person doing the work. Not by a
-            team of delegates translating a partner&apos;s notes.
+            Every engagement is staffed and led by Melodye Harvey — not delegated to
+            junior staff. You work directly with the practitioner doing the work.
           </p>
 
-          <ul className="mt-16 stagger">
+          <div className="mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 stagger">
             {site.capabilities.map((c, i) => (
-              <li
-                key={c.title}
-                className="group grid grid-cols-12 gap-6 py-9 border-t border-ink-200 last:border-b last:border-ink-200"
-                style={{
-                  transition: "background-color 220ms var(--ease-drawer)",
-                }}
-              >
-                <div className="col-span-2 sm:col-span-1 pt-2">
-                  <span className="font-mono text-[12px] tabular-nums text-ink-400">
+              <div key={c.title} className="cap-card">
+                <div className="flex items-start gap-4 mb-4">
+                  <span className="service-icon text-xl" role="img" aria-hidden>
+                    {serviceIcons[c.title] ?? "◆"}
+                  </span>
+                  <span className="font-mono text-[11px] tabular-nums text-ink-400 pt-3">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                 </div>
-                <div className="col-span-10 sm:col-span-8">
-                  <h3 className="font-serif text-2xl sm:text-[1.7rem] tracking-tightish text-ink-900 leading-tight">
-                    {c.title}
-                  </h3>
-                  <p className="mt-4 text-[15.5px] text-ink-600 leading-relaxed max-w-xl">
-                    {c.summary}
-                  </p>
-                </div>
-                <div className="hidden sm:flex sm:col-span-3 items-start justify-end pt-3">
-                  <span
-                    className="font-serif text-2xl text-ink-300"
-                    style={{
-                      transition: "transform 280ms var(--ease-out), color 220ms var(--ease-drawer)",
-                    }}
-                  >
-                    →
-                  </span>
-                </div>
-              </li>
+                <h3 className="font-serif text-[1.2rem] tracking-tightish text-ink-900 leading-tight">
+                  {c.title}
+                </h3>
+                <p className="mt-3 text-[14px] text-ink-600 leading-relaxed">
+                  {c.summary}
+                </p>
+              </div>
             ))}
-          </ul>
+          </div>
 
           <div className="mt-12">
             <Link href="/capabilities" className="btn-quiet">
-              Read the full capability set
+              Explore all practice areas
             </Link>
           </div>
         </div>
       </section>
 
-      {/* ============ 3. THE SHAPE OF THE PRACTICE — 3-up metric row */}
-      {/* Layout family: centered headline + 3-col stat grid */}
-      <section className="border-b border-ink-200/80 bg-paperDeep/50">
+      {/* ============ 4. STATS / PROOF — warm dark band =================== */}
+      <section className="border-b border-ink-200/80 warm-band text-paper">
         <div className="wrap py-24 lg:py-28">
-          <h2 className="display-sm max-w-3xl">
-            What ten years of in-the-room work looks like,
-            {" "}
-            <span className="italic text-ink-600">in numbers.</span>
-          </h2>
-
-          <div className="mt-16 grid gap-y-12 gap-x-10 sm:grid-cols-3 stagger">
+          <div className="grid gap-y-12 gap-x-10 sm:grid-cols-3 stagger">
             {site.outcomes.map((o) => (
-              <div key={o.unit} className="border-t border-ink-300/70 pt-6">
-                <div className="font-serif text-[3.6rem] sm:text-[4rem] leading-none tracking-tighter3 text-ink-900 tabular-nums">
+              <div key={o.unit} className="border-t pt-6" style={{ borderColor: "rgba(247,244,236,0.2)" }}>
+                <div
+                  className="font-serif leading-none tracking-tighter3 tabular-nums"
+                  style={{
+                    fontSize: o.figure === "CIA" ? "2.8rem" : "clamp(3rem, 6vw, 4rem)",
+                    color: "var(--paper)",
+                  }}
+                >
                   {o.figure}
                 </div>
-                <div className="mt-3 font-serif text-base italic text-ink-600">
+                <div className="mt-3 font-serif text-base italic" style={{ color: "rgba(247,244,236,0.65)" }}>
                   {o.unit}
                 </div>
-                <p className="mt-5 text-[14.5px] leading-relaxed text-ink-700 max-w-[28ch]">
+                <p className="mt-5 text-[14.5px] leading-relaxed max-w-[28ch]" style={{ color: "rgba(247,244,236,0.75)" }}>
                   {o.detail}
                 </p>
               </div>
@@ -151,99 +239,181 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ============ 4. WHO WE SERVE — 3-col text grid */}
-      {/* Layout family: stacked vertical headline + 3-col descriptive grid */}
+      {/* ============ 5. WHO WE SERVE ====================================== */}
       <section className="border-b border-ink-200/80">
         <div className="wrap py-24 lg:py-32">
-          <div className="grid gap-y-10 gap-x-16 lg:grid-cols-12">
-            <h2 className="display-sm lg:col-span-12 max-w-3xl">
-              Organizations where the details
-              {" "}
-              <span className="italic text-ink-600">actually matter.</span>
-            </h2>
+          <div className="flex items-center gap-3 mb-6">
+            <span className="h-px w-8 bg-ink-400" />
+            <span className="eyebrow">Who we serve</span>
+          </div>
+          <h2 className="display-sm max-w-3xl">
+            Organizations where the details
+            {" "}
+            <span className="italic text-ink-600">actually matter.</span>
+          </h2>
+          <p className="mt-6 text-ink-600 leading-relaxed max-w-2xl">
+            BroadPivot supports both small organizations and larger business opportunities.
+            Our language and approach are never limiting — we are positioned as a trusted
+            partner capable of scaling with you.
+          </p>
 
-            <div className="lg:col-span-12 mt-6 grid gap-10 sm:grid-cols-3 stagger">
-              {site.whoWeServe.map((w) => (
-                <div key={w.title} className="border-t border-ink-300/70 pt-6">
-                  <h3 className="font-serif text-xl sm:text-[1.4rem] tracking-tightish text-ink-900 leading-tight">
-                    {w.title}
-                  </h3>
-                  <p className="mt-4 text-[15px] text-ink-600 leading-relaxed">
-                    {w.blurb}
-                  </p>
+          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 stagger">
+            {site.whoWeServe.map((w) => (
+              <div
+                key={w.title}
+                className="border border-ink-200 p-6"
+                style={{ transition: "border-color 220ms var(--ease-drawer)" }}
+              >
+                <h3 className="font-serif text-[1.1rem] tracking-tightish text-ink-900 leading-tight">
+                  {w.title}
+                </h3>
+                <p className="mt-4 text-[14px] text-ink-600 leading-relaxed">
+                  {w.blurb}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============ 6. MEET MELODYE — dark section with headshot ========= */}
+      <section className="relative overflow-hidden bg-ink-900 text-paper">
+        <DarkPlate />
+
+        <div className="relative wrap py-24 lg:py-32">
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+
+            {/* Headshot */}
+            <div className="lg:col-span-4 flex justify-start lg:justify-center">
+              <div className="relative w-64 lg:w-full max-w-[280px]">
+                <Image
+                  src="/images/melodye-harvey.png"
+                  alt="Melodye Harvey, CIA"
+                  width={280}
+                  height={350}
+                  className="object-cover object-top w-full grayscale"
+                  style={{ maxHeight: 350, display: "block" }}
+                />
+                <div
+                  className="absolute bottom-0 left-0 right-0 px-4 py-4"
+                  style={{
+                    background: "linear-gradient(to top, rgba(14,13,10,0.9) 0%, transparent 100%)",
+                  }}
+                >
+                  <div className="credential-badge" style={{ borderColor: "rgba(247,244,236,0.3)" }}>
+                    <span className="credential-badge__label" style={{ color: "#b3ab93" }}>CIA</span>
+                    <span className="credential-badge__divider" style={{ background: "#b3ab93" }} />
+                    <span className="credential-badge__text" style={{ color: "#b3ab93" }}>Certified Internal Auditor</span>
+                  </div>
                 </div>
-              ))}
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className="lg:col-span-8">
+              <div className="eyebrow-paper">Meet the founder</div>
+
+              <h2 className="mt-6 font-serif text-[2rem] sm:text-[2.5rem] leading-[1.1] tracking-tighter2 text-paper">
+                Melodye Harvey, CIA
+              </h2>
+              <div className="mt-2 mono-label text-ink-300">
+                Principal Consultant & Founder · BroadPivot Consulting LLC
+              </div>
+
+              <blockquote className="mt-8 accent-left">
+                <p className="font-serif text-[1.2rem] sm:text-[1.4rem] leading-[1.4] tracking-tightish text-paper/90 italic">
+                  &ldquo;I started BroadPivot to provide the type of flexible, strategic,
+                  and hands-on consulting support that organizations need to pivot with
+                  purpose — and to actually move forward.&rdquo;
+                </p>
+              </blockquote>
+
+              <p className="mt-8 text-[15.5px] leading-relaxed text-ink-300 max-w-2xl">
+                With a career built across compliance, privacy, audit, information security,
+                healthcare, nonprofit leadership, and project coordination, Melodye brings
+                a rare breadth of expertise to every engagement. She has worked with
+                organizations that needed stronger structure, clearer processes, better
+                compliance readiness, and practical support to move initiatives forward.
+              </p>
+
+              <div className="mt-10 grid sm:grid-cols-2 gap-6 max-w-2xl">
+                {site.principles.slice(0, 2).map((p) => (
+                  <div key={p.title} className="border-t border-ink-700 pt-5">
+                    <div className="font-serif text-[1rem] tracking-tightish text-paper">
+                      {p.title}
+                    </div>
+                    <p className="mt-2 text-[13.5px] leading-relaxed text-ink-300">
+                      {p.body}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-10">
+                <Link
+                  href="/about"
+                  className="inline-flex items-center gap-3 border border-paper/30 px-6 py-3.5 text-[13.5px] font-medium tracking-tight text-paper"
+                  style={{ transition: "background-color 200ms var(--ease-drawer)" }}
+                >
+                  Read Melodye&apos;s full background
+                </Link>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ============ 5. PRACTITIONER NOTE — dark contrast plate */}
-      {/* Layout family: dark section, single large quote + 2-up principles */}
-      <section className="relative overflow-hidden bg-ink-900 text-paper">
-        <DarkPlate />
-
-        <div className="relative wrap py-24 lg:py-32">
-          <div className="eyebrow-paper">How we work</div>
-
-          <blockquote className="mt-8 font-serif text-[1.85rem] sm:text-[2.4rem] leading-[1.15] tracking-tighter2 max-w-4xl">
-            <span className="text-ink-400">&ldquo;</span>
-            Every engagement is led by a practitioner who has been in the room
-            with the auditor, the regulator, and the contracting officer. We
-            translate regulatory complexity into right-sized programs you can
-            actually <span className="italic leading-[1.1] pb-1 inline-block">operate.</span>
-            <span className="text-ink-400">&rdquo;</span>
-          </blockquote>
-
-          <p className="mt-8 mono-label text-ink-300">
-            Practice lead. A decade across healthcare, financial services, and technology compliance.
-          </p>
-
-          <div className="mt-16 grid gap-10 sm:grid-cols-2 max-w-4xl">
-            {site.principles.slice(0, 2).map((p) => (
-              <div key={p.title} className="border-t border-ink-700 pt-6">
-                <div className="font-serif text-lg tracking-tightish text-paper">
-                  {p.title}
-                </div>
-                <p className="mt-3 text-[14.5px] leading-relaxed text-ink-300">
-                  {p.body}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-12">
-            <Link
-              href="/about"
-              className="inline-flex items-center gap-3 border border-paper/30 px-6 py-3.5 text-[13.5px] font-medium tracking-tight text-paper"
-              style={{
-                transition:
-                  "background-color 200ms var(--ease-drawer), color 200ms var(--ease-drawer), transform 160ms var(--ease-out)",
-              }}
-            >
-              Read the full approach
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ============ 6. CLOSING CTA — minimal */}
-      {/* Layout family: minimal closing, ample whitespace */}
+      {/* ============ 7. CLOSING CTA ======================================= */}
       <section className="border-b border-ink-200/80">
         <div className="wrap py-28 lg:py-36">
-          <h2 className="display-sm max-w-3xl">
-            Discuss your roadmap,
-            {" "}
-            <span className="italic text-ink-600">confidentially.</span>
-          </h2>
-          <p className="mt-6 text-ink-600 max-w-xl leading-relaxed">
-            Tell us about your environment and what success looks like. We
-            respond within one business day.
-          </p>
-          <div className="mt-12">
-            <Link href="/contact" className="btn">
-              Start a conversation
-            </Link>
+          <div className="grid lg:grid-cols-12 gap-10 items-start">
+            <div className="lg:col-span-7">
+              <div className="flex items-center gap-3 mb-6">
+                <span className="h-px w-8 bg-accent-warm" />
+                <span className="eyebrow">Ready to start?</span>
+              </div>
+              <h2 className="display-sm max-w-3xl">
+                Discuss your roadmap,
+                {" "}
+                <span className="italic text-ink-600">confidentially.</span>
+              </h2>
+              <p className="mt-6 text-ink-600 max-w-xl leading-relaxed">
+                Tell us about your environment, organization, and what success looks like.
+                Whether you are a small business, a nonprofit, a contractor, or a large
+                enterprise — BroadPivot is prepared to support your goals. We respond
+                within one business day.
+              </p>
+              <div className="mt-10 flex flex-wrap gap-4">
+                <Link href="/contact" className="btn">
+                  Start a conversation
+                </Link>
+                <Link href="/capabilities" className="btn-ghost">
+                  View all services
+                </Link>
+              </div>
+            </div>
+            <div className="lg:col-span-5 lg:pl-10 lg:border-l lg:border-ink-200 space-y-6 mt-4 lg:mt-0">
+              {[
+                { label: "Direct", value: "info@broadpivotllc.com", href: "mailto:info@broadpivotllc.com" },
+                { label: "Response time", value: "Within one business day" },
+                { label: "Confidentiality", value: "Inquiries treated confidential by default" },
+                { label: "Location", value: "United States · Remote-first" },
+              ].map((item) => (
+                <div key={item.label}>
+                  <div className="mono-label">{item.label}</div>
+                  {item.href ? (
+                    <a
+                      href={item.href}
+                      className="mt-2 block text-[15px] text-ink-700 hover:text-ink-900 underline underline-offset-4 decoration-ink-300"
+                    >
+                      {item.value}
+                    </a>
+                  ) : (
+                    <p className="mt-2 text-[15px] text-ink-700">{item.value}</p>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

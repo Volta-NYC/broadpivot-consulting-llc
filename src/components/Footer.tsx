@@ -21,12 +21,16 @@ export default function Footer() {
               </span>
             </div>
             <p className="mt-8 font-serif text-[1.6rem] sm:text-[1.85rem] leading-[1.18] tracking-tightish text-ink-900 max-w-3xl">
-              Compliance, risk, and cybersecurity work that auditors,
-              regulators, and customers can actually
+              Strategic consulting that helps organizations
+              structure, adapt, and move forward
               {" "}
               <span className="italic text-ink-600 leading-[1.1] pb-1 inline-block">
-                rely on.
+                with purpose.
               </span>
+            </p>
+            <p className="mt-4 text-[14px] text-ink-500 max-w-xl leading-relaxed">
+              Led by Melodye Harvey, CIA. Serving businesses, nonprofits, government contractors,
+              and project-based teams across the United States.
             </p>
             <div className="mt-10">
               <Link href="/contact" className="btn">Start a conversation</Link>
@@ -75,6 +79,8 @@ export default function Footer() {
           <div>© {new Date().getFullYear()} BroadPivot Consulting LLC. All rights reserved.</div>
           <div className="flex items-center gap-5">
             <span>{site.domain}</span>
+            <span className="text-ink-300">·</span>
+            <span>Melodye Harvey, CIA</span>
             <span className="text-ink-300">·</span>
             <span>Confidential by default</span>
           </div>

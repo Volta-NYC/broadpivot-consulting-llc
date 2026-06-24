@@ -248,3 +248,156 @@ body::before {
   outline-offset: 3px;
   border-radius: 1px;
 }
+
+/* ── Credential badge ───────────────────────────────────────────────── */
+.credential-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  border: 1px solid var(--accent);
+  padding: 0.375rem 0.875rem;
+  background: transparent;
+}
+.credential-badge__label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.credential-badge__divider {
+  display: block;
+  width: 1px;
+  height: 14px;
+  background: var(--accent);
+  opacity: 0.3;
+}
+.credential-badge__text {
+  font-size: 12.5px;
+  color: var(--ink-600, #3c372c);
+  letter-spacing: -0.005em;
+}
+
+/* ── Photo frame ────────────────────────────────────────────────────── */
+.photo-frame {
+  position: relative;
+  display: inline-block;
+}
+.photo-frame::before {
+  content: "";
+  position: absolute;
+  inset: -10px -10px auto auto;
+  width: 50%;
+  height: 50%;
+  border-top: 2px solid var(--accent-warm);
+  border-right: 2px solid var(--accent-warm);
+  pointer-events: none;
+  z-index: 1;
+}
+.photo-frame::after {
+  content: "";
+  position: absolute;
+  inset: auto auto -10px -10px;
+  width: 50%;
+  height: 50%;
+  border-bottom: 2px solid var(--accent);
+  border-left: 2px solid var(--accent);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ── Accent strip (warm left border) ───────────────────────────────── */
+.accent-left {
+  border-left: 3px solid var(--accent-warm);
+  padding-left: 1.25rem;
+}
+
+/* ── Warm highlight band ────────────────────────────────────────────── */
+.warm-band {
+  background: linear-gradient(135deg, #1f3a52 0%, #142838 100%);
+}
+
+/* ── Capability card hover ──────────────────────────────────────────── */
+.cap-card {
+  border: 1px solid var(--ink-200);
+  padding: 1.75rem;
+  background: var(--paper);
+  transition:
+    border-color 220ms var(--ease-drawer),
+    box-shadow 220ms var(--ease-drawer),
+    transform 200ms var(--ease-out);
+}
+.cap-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 24px rgba(31, 58, 82, 0.10);
+  transform: translateY(-2px);
+}
+
+/* ── Service icon circle ────────────────────────────────────────────── */
+.service-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--ink-200);
+  border-radius: 50%;
+  font-size: 18px;
+  flex-shrink: 0;
+  background: var(--paper);
+}
+
+/* ── Pill tag ───────────────────────────────────────────────────────── */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border: 1px solid var(--ink-200);
+  padding: 0.3rem 0.75rem;
+  font-size: 12px;
+  font-family: var(--font-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-600, #3c372c);
+  background: var(--paper);
+}
+
+/* ── Btn accent (warm) ──────────────────────────────────────────────── */
+.btn-accent {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  border: 1px solid var(--accent-warm);
+  background: var(--accent-warm);
+  color: var(--paper);
+  padding: 0.875rem 1.5rem;
+  font-size: 13.5px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  transition:
+    background-color 200ms var(--ease-drawer),
+    border-color 200ms var(--ease-drawer),
+    transform 160ms var(--ease-out);
+}
+.btn-accent:hover {
+  background: #8f4522;
+  border-color: #8f4522;
+}
+.btn-accent:active { transform: scale(0.97); }
+.btn-accent::after {
+  content: "→";
+  font-family: var(--font-serif);
+  transition: transform 220ms var(--ease-out);
+}
+.btn-accent:hover::after { transform: translateX(4px); }
+
+/* ── Decorative quote mark ──────────────────────────────────────────── */
+.quote-mark {
+  font-family: var(--font-serif);
+  font-size: 6rem;
+  line-height: 0.7;
+  color: var(--accent-warm);
+  opacity: 0.25;
+  user-select: none;
+}
