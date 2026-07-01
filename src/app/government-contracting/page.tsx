@@ -99,7 +99,7 @@ export default function GovPage() {
           </h2>
           <p className="mt-6 text-ink-600 leading-relaxed max-w-2xl">
             The focus is broad and execution-oriented: helping organizations keep the
-            work organized, documented, controlled, and ready for review.
+            work organized, documented, controlled, and prepared for performance.
           </p>
 
           <ul className="mt-14 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 stagger">
