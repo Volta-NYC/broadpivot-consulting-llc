@@ -1,30 +1,40 @@
 import Link from "next/link";
-import { site } from "@/lib/site";
 import { BlueprintBackdrop } from "@/components/Backdrop";
 
 export const metadata = { title: "Government Contracting" };
 
 const phases = [
   {
-    name: "Position",
+    name: "Assess",
     blurb:
-      "Establish the foundation. SAM.gov registration, UEI, NAICS alignment, capability statement, and a clear value proposition for federal, state, and local buyers.",
+      "Clarify the requirements, risks, documentation needs, and operational expectations connected to the government-related work your organization is pursuing or performing.",
   },
   {
-    name: "Comply",
+    name: "Document",
     blurb:
-      "Build the controls buyers require. NIST 800-171 and CMMC alignment, FAR / DFARS readiness, cybersecurity attestations, and audit-ready documentation.",
+      "Create practical policies, procedures, evidence files, reporting routines, and internal control records that help teams stay organized and audit-ready.",
   },
   {
-    name: "Pursue",
+    name: "Coordinate",
     blurb:
-      "Capture support, proposal preparation, teaming strategies, and pricing positioning so you compete where you can actually win.",
+      "Support project teams, vendors, subcontractors, and internal stakeholders so responsibilities, deadlines, compliance tasks, and delivery expectations stay visible.",
   },
   {
     name: "Perform",
     blurb:
-      "Deliver against contract requirements with operational rigor. Ongoing compliance monitoring, reporting, and renewal positioning.",
+      "Strengthen contract performance with operational rigor, risk management, compliance monitoring, issue tracking, and steady project support through delivery.",
   },
+];
+
+const supportAreas = [
+  "Audit and compliance support",
+  "Documentation and evidence management",
+  "Operational readiness",
+  "Internal controls",
+  "Project coordination",
+  "Risk management",
+  "Vendor and team support",
+  "Contract performance support",
 ];
 
 export default function GovPage() {
@@ -41,18 +51,18 @@ export default function GovPage() {
           </div>
 
           <h1 className="display mt-8 max-w-[18ch]">
-            Position your business to win.
+            Support for government-related work.
             {" "}
             <span className="italic text-ink-700 leading-[1.1] pb-1 inline-block">
-              And to deliver.
+              Built to perform.
             </span>
           </h1>
 
           <p className="lede mt-8 max-w-2xl">
-            Federal, state, and local opportunities reward the prepared. We
-            build the compliance, security, and operational foundation public
-            sector buyers expect, then move you from registration to award to
-            performance.
+            BroadPivot supports organizations pursuing or performing federal,
+            state, local, and government-adjacent work with audit, compliance,
+            documentation, operational readiness, internal controls, project
+            coordination, risk management, vendor support, and contract performance support.
           </p>
         </div>
       </section>
@@ -79,21 +89,21 @@ export default function GovPage() {
         ))}
       </section>
 
-      {/* FRAMEWORKS — card grid, not divider-per-row spec sheet */}
+      {/* SUPPORT AREAS */}
       <section className="border-b border-ink-200/80 bg-paperDeep/50">
         <div className="wrap py-24 lg:py-28">
           <h2 className="display-sm max-w-3xl">
-            Compliance environments we
+            Practical support for
             {" "}
-            <span className="italic text-ink-600">routinely operate in.</span>
+            <span className="italic text-ink-600">performance and control.</span>
           </h2>
           <p className="mt-6 text-ink-600 leading-relaxed max-w-2xl">
-            The acronym soup, demystified. We map each requirement to controls
-            your team can actually run and your auditor can actually verify.
+            The focus is broad and execution-oriented: helping organizations keep the
+            work organized, documented, controlled, and ready for review.
           </p>
 
           <ul className="mt-14 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 stagger">
-            {site.frameworks.map((f) => (
+            {supportAreas.map((f) => (
               <li
                 key={f}
                 className="border border-ink-300/70 bg-paper px-5 py-5 text-[14.5px] font-serif tracking-tightish text-ink-800"
@@ -109,14 +119,39 @@ export default function GovPage() {
         </div>
       </section>
 
+      {/* CAPABILITY STATEMENT */}
+      <section className="border-b border-ink-200/80">
+        <div className="wrap py-20 lg:py-24">
+          <div className="grid gap-8 lg:grid-cols-12 lg:items-center">
+            <div className="lg:col-span-8">
+              <div className="flex items-center gap-3 mb-6">
+                <span className="h-px w-8 bg-accent-warm" />
+                <span className="eyebrow">Capability statement</span>
+              </div>
+              <h2 className="display-sm max-w-2xl">BroadPivot capability statement.</h2>
+              <p className="mt-6 text-ink-600 leading-relaxed max-w-2xl">
+                A downloadable capability statement will be available here once finalized
+                for visitors who need a concise overview of BroadPivot&apos;s services,
+                leadership, and government-related support.
+              </p>
+            </div>
+            <div className="lg:col-span-4 lg:text-right">
+              <button className="btn-ghost opacity-70 cursor-not-allowed" type="button" disabled>
+                Download coming soon
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-24 lg:py-28">
         <div className="wrap">
           <h3 className="display-sm max-w-3xl">
-            Tell us where you are.
+            Tell us what you are building.
             {" "}
             <span className="italic text-ink-600">
-              Registration, certification, capture, or performance.
+              Pursuit, project, team, or contract performance.
             </span>
             {" "}
             We&apos;ll meet you there.

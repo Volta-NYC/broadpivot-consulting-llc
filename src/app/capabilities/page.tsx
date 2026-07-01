@@ -18,7 +18,7 @@ const serviceIcons: Record<string, string> = {
   "Business Operations & Process Improvement": "⚙️",
   "Nonprofit & Mission-Driven Organization Support": "🤝",
   "Project & Construction Management": "🏗️",
-  "Government Contracting Readiness": "🏛️",
+  "Government Contracting Support": "🏛️",
   "Cybersecurity & Information Security": "🔐",
 };
 
@@ -44,9 +44,9 @@ export default function CapabilitiesPage() {
           </h1>
 
           <p className="lede mt-8 max-w-2xl">
-            From compliance program design to nonprofit governance to government contracting
-            readiness — work led personally by Melodye Harvey, CIA, that holds up under
-            audit, regulator scrutiny, and customer due diligence.
+            From compliance program design to nonprofit governance, business operations,
+            project support, construction coordination, cybersecurity, and government-related
+            work — senior-led consulting by Melodye Harvey, MBA, MSL, CIA.
           </p>
 
           {/* Quick nav */}
@@ -192,8 +192,8 @@ export default function CapabilitiesPage() {
           </h3>
           <p className="mt-6 text-ink-600 max-w-xl leading-relaxed">
             Whether you need compliance support, nonprofit guidance, project coordination,
-            or government contracting readiness — the conversation starts with understanding
-            your goals.
+            construction management support, government contracting support, or general
+            business operations support — the conversation starts with understanding your goals.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Link href="/contact" className="btn">

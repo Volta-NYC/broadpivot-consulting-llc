@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Image from "next/image";
 import { site } from "@/lib/site";
+import LogoMark from "@/components/LogoMark";
 
 export default function Footer() {
   return (
@@ -9,13 +9,7 @@ export default function Footer() {
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-7">
             <div className="flex items-center gap-3">
-              <Image
-                src="/images/logo.png"
-                alt=""
-                width={36}
-                height={36}
-                className="h-8 w-8 object-contain"
-              />
+              <LogoMark className="h-9 w-9 shrink-0" />
               <span className="font-serif text-[1.05rem] tracking-tightish text-ink-900">
                 BroadPivot<span className="text-ink-400"> Consulting</span>
               </span>

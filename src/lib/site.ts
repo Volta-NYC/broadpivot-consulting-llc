@@ -9,9 +9,9 @@ export const site = {
   email: "info@broadpivotllc.com",
   practitioner: {
     name: "Melodye Harvey",
-    credential: "CIA",
+    credential: "MBA, MSL, CIA",
     title: "Principal Consultant & Founder",
-    bio: "Melodye Harvey is a Certified Internal Auditor (CIA) with extensive experience across compliance, privacy, audit, information security, healthcare, nonprofit leadership, business operations, and project coordination. She founded BroadPivot to help organizations pivot with purpose — bringing structure, strategy, and hands-on execution support to businesses, nonprofits, and public-sector partners of all sizes.",
+    bio: "Melodye Harvey, MBA, MSL, CIA, is a senior consultant with more than 30 years of experience across compliance, audit, privacy, healthcare, nonprofit governance, operations, cybersecurity, and project support. She founded BroadPivot to help organizations pivot with purpose — bringing structure, strategy, and hands-on execution support to businesses, nonprofits, project-based teams, construction initiatives, and government-related work.",
   },
   nav: [
     { label: "About", href: "/about" },
@@ -51,7 +51,7 @@ export const site = {
     {
       title: "Public sector & government contractors",
       blurb:
-        "Pre-award positioning, compliance foundations, and performance support for federal, state, and local contracting opportunities.",
+        "Audit, compliance, documentation, internal controls, and performance support for organizations pursuing or performing government-related work.",
     },
     {
       title: "Construction & project-based businesses",
@@ -71,6 +71,7 @@ export const site = {
         "Privacy program development and data governance",
         "Policy, procedure, and evidence frameworks",
         "Control design, testing, and ongoing monitoring",
+        "General compliance support across regulated and operational environments",
       ],
     },
     {
@@ -113,16 +114,16 @@ export const site = {
       ],
     },
     {
-      title: "Government Contracting Readiness",
+      title: "Government Contracting Support",
       summary:
-        "Positioning, compliance, and pursuit support for federal, state, and local opportunities — from initial registration through award and contract performance.",
+        "Broad audit, compliance, documentation, and operational support for organizations pursuing or performing federal, state, local, or government-adjacent work.",
       points: [
-        "SAM.gov, UEI, and NAICS code alignment",
-        "Capability statement development and positioning",
-        "FAR / DFARS and NIST 800-171 readiness",
-        "Small-business certifications guidance",
-        "Proposal development and capture support",
-        "Contract performance and compliance monitoring",
+        "Audit and compliance support for government-related requirements",
+        "Documentation, evidence, and reporting workflows",
+        "Operational readiness and internal controls",
+        "Project coordination and contract performance support",
+        "Risk management for teams, vendors, and delivery partners",
+        "Vendor, subcontractor, and cross-functional team support",
       ],
     },
     {
@@ -146,9 +147,9 @@ export const site = {
       detail: "Rigorous, credentialed audit and risk expertise applied directly to every engagement.",
     },
     {
-      figure: "10+",
+      figure: "30+",
       unit: "years of experience",
-      detail: "Across compliance, nonprofit leadership, business operations, healthcare, and government contracting.",
+      detail: "Across compliance, audit, privacy, healthcare, nonprofit governance, operations, cybersecurity, and project support.",
     },
     {
       figure: "6",
@@ -165,7 +166,7 @@ export const site = {
     {
       title: "Senior, hands-on delivery",
       body:
-        "Every engagement is led by Melodye Harvey, CIA, directly. No delegates, no hand-offs to junior staff. You work with the practitioner doing the work.",
+        "Every engagement is led by Melodye Harvey, MBA, MSL, CIA, directly. No delegates, no hand-offs to junior staff. You work with the practitioner doing the work.",
     },
     {
       title: "Adaptable and right-sized",

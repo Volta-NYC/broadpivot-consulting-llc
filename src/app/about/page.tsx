@@ -31,15 +31,16 @@ export default function AboutPage() {
               </h1>
 
               <p className="lede mt-8 max-w-xl">
-                BroadPivot Consulting LLC was created from a career built across compliance,
-                nonprofit leadership, healthcare, operations, and government work — with one
-                goal: helping organizations move forward with clarity.
+                BroadPivot Consulting LLC was created from more than 30 years across
+                compliance, audit, privacy, healthcare, nonprofit governance, operations,
+                cybersecurity, and project support — with one goal: helping organizations
+                move forward with clarity.
               </p>
 
               <div className="mt-8 credential-badge inline-flex">
-                <span className="credential-badge__label">CIA</span>
+                <span className="credential-badge__label">MBA · MSL · CIA</span>
                 <span className="credential-badge__divider" />
-                <span className="credential-badge__text">Certified Internal Auditor</span>
+                <span className="credential-badge__text">Senior-led consulting</span>
               </div>
             </div>
 
@@ -112,13 +113,13 @@ export default function AboutPage() {
               </div>
               <div className="space-y-6 body-prose">
                 <p className="font-serif text-[1.55rem] sm:text-[1.75rem] text-ink-900 leading-snug tracking-tightish">
-                  BroadPivot was created from professional experience across compliance,
-                  privacy, audit, information security, healthcare, nonprofit leadership,
-                  business operations, and project coordination.
+                  BroadPivot was created from more than 30 years of professional experience
+                  across compliance, privacy, audit, information security, healthcare,
+                  nonprofit governance, business operations, cybersecurity, and project support.
                 </p>
                 <p>
                   Throughout her career, Melodye Harvey has worked with organizations that
-                  needed stronger structure, clearer processes, better compliance readiness,
+                  needed stronger structure, clearer processes, better compliance practices,
                   and practical support to move initiatives forward. The perspective behind
                   BroadPivot is rooted in helping organizations pivot with purpose.
                 </p>
@@ -131,8 +132,8 @@ export default function AboutPage() {
                 </p>
                 <p>
                   The result is a practice prepared to support business operations, compliance
-                  and risk management, nonprofit initiatives, project coordination, construction
-                  and project management, and government contracting readiness — for both small
+                  and risk management, nonprofit governance, project coordination, construction
+                  and project management, and government contracting support — for both small
                   organizations and larger business opportunities.
                 </p>
               </div>
@@ -143,9 +144,24 @@ export default function AboutPage() {
                   <div className="mono-label">Credentials</div>
                   <div className="mt-4 space-y-3">
                     <div className="flex items-center gap-3 border border-ink-200 px-4 py-3">
+                      <span className="font-mono text-[11px] font-semibold uppercase tracking-widest" style={{ color: "var(--accent)" }}>MBA</span>
+                      <span className="w-px h-4 bg-ink-200" />
+                      <span className="text-[13.5px] text-ink-700">Master of Business Administration</span>
+                    </div>
+                    <div className="flex items-center gap-3 border border-ink-200 px-4 py-3">
+                      <span className="font-mono text-[11px] font-semibold uppercase tracking-widest" style={{ color: "var(--accent)" }}>MSL</span>
+                      <span className="w-px h-4 bg-ink-200" />
+                      <span className="text-[13.5px] text-ink-700">Master of Studies in Law, Data Privacy Law</span>
+                    </div>
+                    <div className="flex items-center gap-3 border border-ink-200 px-4 py-3">
                       <span className="font-mono text-[11px] font-semibold uppercase tracking-widest" style={{ color: "var(--accent)" }}>CIA</span>
                       <span className="w-px h-4 bg-ink-200" />
                       <span className="text-[13.5px] text-ink-700">Certified Internal Auditor</span>
+                    </div>
+                    <div className="flex items-center gap-3 border border-ink-200 px-4 py-3">
+                      <span className="font-mono text-[11px] font-semibold uppercase tracking-widest" style={{ color: "var(--accent)" }}>Privacy</span>
+                      <span className="w-px h-4 bg-ink-200" />
+                      <span className="text-[13.5px] text-ink-700">Cybersecurity and privacy training</span>
                     </div>
                   </div>
                 </div>
@@ -158,10 +174,12 @@ export default function AboutPage() {
                       "Internal audit",
                       "Information security",
                       "Healthcare operations",
-                      "Nonprofit leadership",
+                      "Nonprofit board leadership",
                       "Business operations",
-                      "Project coordination",
-                      "Government contracting",
+                      "General compliance",
+                      "Cybersecurity and privacy training",
+                      "Project and construction support",
+                      "Government contracting support",
                     ].map((item) => (
                       <li key={item} className="flex items-center gap-2">
                         <span className="w-1 h-1 rounded-full flex-shrink-0" style={{ background: "var(--accent-warm)" }} />
@@ -182,10 +200,10 @@ export default function AboutPage() {
           <h2 className="display-sm max-w-3xl">At a glance.</h2>
           <dl className="mt-14 grid gap-y-10 gap-x-12 grid-cols-2 sm:grid-cols-4 stagger">
             {[
-              { dt: "Years of experience", dd: "10+" },
+              { dt: "Years of experience", dd: "30+" },
               { dt: "Practice areas", dd: "6" },
               { dt: "Engagement model", dd: "Embedded" },
-              { dt: "Lead credential", dd: "CIA" },
+              { dt: "Lead credentials", dd: "MBA · MSL · CIA" },
             ].map((row) => (
               <div key={row.dt} className="border-t border-ink-300/70 pt-5">
                 <dt className="mono-label">{row.dt}</dt>

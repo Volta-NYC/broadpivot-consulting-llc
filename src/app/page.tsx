@@ -8,7 +8,7 @@ const serviceIcons: Record<string, string> = {
   "Business Operations & Process Improvement": "⚙️",
   "Nonprofit & Mission-Driven Organization Support": "🤝",
   "Project & Construction Management": "🏗️",
-  "Government Contracting Readiness": "🏛️",
+  "Government Contracting Support": "🏛️",
   "Cybersecurity & Information Security": "🔐",
 };
 
@@ -43,10 +43,10 @@ export default function Home() {
               </h1>
 
               <p className="lede mt-8 max-w-xl">
-                BroadPivot partners with businesses, nonprofits, public-sector
-                organizations, and project-based teams to build stronger operations,
-                navigate compliance, coordinate complex initiatives, and position
-                for sustainable growth.
+                BroadPivot partners with businesses, nonprofits, project-based teams,
+                construction and project management initiatives, and organizations
+                pursuing government-related work to strengthen operations, manage risk,
+                coordinate complex work, and grow with purpose.
               </p>
 
               <div className="mt-10 flex flex-wrap items-center gap-4">
@@ -59,7 +59,7 @@ export default function Home() {
               </div>
 
               <div className="mt-10 flex flex-wrap gap-2">
-                {["Compliance", "Nonprofits", "Operations", "Gov Contracting", "Construction", "Cybersecurity"].map((tag) => (
+                {["Compliance", "Operations", "Nonprofit Governance", "Gov Contracting", "Project Support", "Cybersecurity"].map((tag) => (
                   <span key={tag} className="pill">{tag}</span>
                 ))}
               </div>
@@ -179,8 +179,9 @@ export default function Home() {
             <span className="italic text-ink-600">consulting partner.</span>
           </h2>
           <p className="mt-6 text-ink-600 leading-relaxed max-w-2xl">
-            Every engagement is staffed and led by Melodye Harvey — not delegated to
-            junior staff. You work directly with the practitioner doing the work.
+            Every engagement is staffed and led by Melodye Harvey, MBA, MSL, CIA —
+            not delegated to junior staff. You work directly with the practitioner
+            doing the work.
           </p>
 
           <div className="mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 stagger">
@@ -329,11 +330,11 @@ export default function Home() {
               </blockquote>
 
               <p className="mt-8 text-[15.5px] leading-relaxed text-ink-300 max-w-2xl">
-                With a career built across compliance, privacy, audit, information security,
-                healthcare, nonprofit leadership, and project coordination, Melodye brings
-                a rare breadth of expertise to every engagement. She has worked with
-                organizations that needed stronger structure, clearer processes, better
-                compliance readiness, and practical support to move initiatives forward.
+                With more than 30 years across compliance, audit, privacy, healthcare,
+                nonprofit governance, operations, cybersecurity, and project support,
+                Melodye brings a rare breadth of expertise to every engagement. She has
+                worked with organizations that needed stronger structure, clearer processes,
+                better compliance practices, and practical support to move initiatives forward.
               </p>
 
               <div className="mt-10 grid sm:grid-cols-2 gap-6 max-w-2xl">

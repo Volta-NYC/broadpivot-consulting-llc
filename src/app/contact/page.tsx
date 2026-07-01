@@ -62,9 +62,11 @@ export default function ContactPage() {
                 >
                   <option value="" disabled>Select one</option>
                   <option>Compliance and Risk Management</option>
-                  <option>Cybersecurity and Data Protection</option>
-                  <option>Government Contracting Readiness</option>
-                  <option>Business Process Optimization</option>
+                  <option>Nonprofit Support</option>
+                  <option>Project and Construction Management Support</option>
+                  <option>Government Contracting Support</option>
+                  <option>General Business Operations Support</option>
+                  <option>Cybersecurity and Privacy Support</option>
                   <option>Not sure yet. Let&apos;s discuss.</option>
                 </select>
               </div>

@@ -1,10 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { site } from "@/lib/site";
+import LogoMark from "@/components/LogoMark";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -21,14 +21,7 @@ export default function Header() {
           className="flex items-center gap-3 group"
           onClick={() => setOpen(false)}
         >
-          <Image
-            src="/images/logo.png"
-            alt="BroadPivot Consulting"
-            width={36}
-            height={36}
-            className="h-8 w-8 object-contain"
-            priority
-          />
+          <LogoMark className="h-9 w-9 shrink-0" />
           <span className="font-serif text-[1.02rem] leading-none tracking-tightish text-ink-900">
             BroadPivot<span className="text-ink-400"> Consulting</span>
           </span>
