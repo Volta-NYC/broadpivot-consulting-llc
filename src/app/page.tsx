@@ -3,15 +3,6 @@ import Image from "next/image";
 import { site } from "@/lib/site";
 import { BlueprintBackdrop, DarkPlate } from "@/components/Backdrop";
 
-const serviceIcons: Record<string, string> = {
-  "Compliance & Risk Management": "⚖️",
-  "Business Operations & Process Improvement": "⚙️",
-  "Nonprofit & Mission-Driven Organization Support": "🤝",
-  "Project & Construction Management": "🏗️",
-  "Government Contracting Support": "🏛️",
-  "Cybersecurity & Information Security": "🔐",
-};
-
 export default function Home() {
   return (
     <>
@@ -66,15 +57,15 @@ export default function Home() {
             </div>
 
             {/* RIGHT: Melodye's headshot */}
-            <div className="hidden lg:flex justify-center lg:justify-end items-end">
+            <div className="hidden lg:flex justify-center lg:justify-end items-end lg:-translate-y-24">
               <div className="photo-frame relative" style={{ maxWidth: 400 }}>
                 <Image
                   src="/images/melodye-harvey.png"
                   alt="Melodye Harvey, CIA — Principal Consultant & Founder, BroadPivot Consulting LLC"
                   width={400}
-                  height={500}
+                  height={533}
                   className="object-cover object-top w-full"
-                  style={{ display: "block", maxHeight: 500, objectPosition: "top center" }}
+                  style={{ display: "block", width: "100%", height: "auto", objectPosition: "top center" }}
                   priority
                 />
                 <div
@@ -188,10 +179,7 @@ export default function Home() {
             {site.capabilities.map((c, i) => (
               <div key={c.title} className="cap-card">
                 <div className="flex items-start gap-4 mb-4">
-                  <span className="service-icon text-xl" role="img" aria-hidden>
-                    {serviceIcons[c.title] ?? "◆"}
-                  </span>
-                  <span className="font-mono text-[11px] tabular-nums text-ink-400 pt-3">
+                  <span className="service-icon" aria-hidden>
                     {String(i + 1).padStart(2, "0")}
                   </span>
                 </div>
@@ -291,9 +279,9 @@ export default function Home() {
                   src="/images/melodye-harvey.png"
                   alt="Melodye Harvey, CIA"
                   width={280}
-                  height={350}
+                  height={373}
                   className="object-cover object-top w-full grayscale"
-                  style={{ maxHeight: 350, display: "block" }}
+                  style={{ width: "100%", height: "auto", display: "block" }}
                 />
                 <div
                   className="absolute bottom-0 left-0 right-0 px-4 py-4"

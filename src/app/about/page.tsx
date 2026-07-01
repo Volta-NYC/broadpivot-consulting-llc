@@ -51,9 +51,9 @@ export default function AboutPage() {
                   src="/images/melodye-harvey.png"
                   alt="Melodye Harvey, CIA — Principal Consultant & Founder"
                   width={420}
-                  height={520}
+                  height={560}
                   className="object-cover object-top w-full"
-                  style={{ display: "block", maxHeight: 520, objectPosition: "top center" }}
+                  style={{ display: "block", width: "100%", height: "auto", objectPosition: "top center" }}
                   priority
                 />
                 <div
@@ -83,9 +83,9 @@ export default function AboutPage() {
               src="/images/melodye-harvey.png"
               alt="Melodye Harvey, CIA"
               width={100}
-              height={120}
+              height={133}
               className="object-cover object-top grayscale"
-              style={{ height: 120, width: 100, display: "block" }}
+              style={{ height: "auto", width: 100, display: "block" }}
             />
           </div>
           <div>

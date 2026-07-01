@@ -13,15 +13,6 @@ const serviceColors = [
   "var(--accent-warm)",
 ];
 
-const serviceIcons: Record<string, string> = {
-  "Compliance & Risk Management": "⚖️",
-  "Business Operations & Process Improvement": "⚙️",
-  "Nonprofit & Mission-Driven Organization Support": "🤝",
-  "Project & Construction Management": "🏗️",
-  "Government Contracting Support": "🏛️",
-  "Cybersecurity & Information Security": "🔐",
-};
-
 export default function CapabilitiesPage() {
   return (
     <>
@@ -58,7 +49,7 @@ export default function CapabilitiesPage() {
                 className="pill hover:border-ink-400"
                 style={{ transition: "border-color 200ms var(--ease-drawer)" }}
               >
-                {serviceIcons[c.title] ?? "◆"} {c.title.split("&")[0].trim()}
+                {c.title.split("&")[0].trim()}
               </a>
             ))}
           </div>
@@ -77,8 +68,8 @@ export default function CapabilitiesPage() {
             >
               <div className="wrap py-20 lg:py-24">
                 <div className="flex items-start gap-5 mb-8">
-                  <span className="service-icon text-2xl flex-shrink-0" role="img" aria-hidden>
-                    {serviceIcons[c.title] ?? "◆"}
+                  <span className="service-icon flex-shrink-0" aria-hidden>
+                    {String(i + 1).padStart(2, "0")}
                   </span>
                   <span className="font-mono text-[11px] tabular-nums text-ink-400 pt-3.5">
                     {String(i + 1).padStart(2, "0")} / {String(site.capabilities.length).padStart(2, "0")}

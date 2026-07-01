@@ -34,8 +34,8 @@ export default function Header() {
               <Link
                 key={n.href}
                 href={n.href}
-                className={`relative px-3.5 py-2 text-[13px] tracking-tight transition ${
-                  active ? "text-ink-900" : "text-ink-500 hover:text-ink-900"
+                className={`nav-link ${
+                  active ? "nav-link--active text-ink-900" : "text-ink-500 hover:text-ink-900"
                 }`}
               >
                 {n.label}
@@ -49,7 +49,7 @@ export default function Header() {
           })}
           <Link
             href="/contact"
-            className="ml-3 inline-flex items-center gap-2 border border-ink-900 px-4 py-2 text-[12.5px] font-medium tracking-tight text-ink-900 transition hover:bg-ink-900 hover:text-paper"
+            className="nav-cta ml-3 inline-flex items-center gap-2 border border-ink-900 px-4 py-2 text-[12.5px] font-medium tracking-tight text-ink-900 hover:bg-ink-900 hover:text-paper"
           >
             Start a conversation
           </Link>
@@ -93,7 +93,7 @@ export default function Header() {
                 key={n.href}
                 href={n.href}
                 onClick={() => setOpen(false)}
-                className="py-3 text-base text-ink-800 border-b border-ink-100 last:border-0 flex items-center justify-between"
+                className="mobile-nav-link py-3 text-base text-ink-800 border-b border-ink-100 last:border-0 flex items-center justify-between"
               >
                 <span>{n.label}</span>
                 <span className="text-ink-400">→</span>
