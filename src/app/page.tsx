@@ -19,9 +19,7 @@ export default function Home() {
                 <span className="h-px w-10 bg-accent-warm" />
                 <span className="eyebrow">Pivot with Purpose · United States</span>
                 <span className="credential-badge ml-2">
-                  <span className="credential-badge__label">CIA</span>
-                  <span className="credential-badge__divider" />
-                  <span className="credential-badge__text">Certified Internal Auditor</span>
+                  <span className="credential-badge__text">Certified Internal Auditor (CIA)</span>
                 </span>
               </div>
 
@@ -89,24 +87,17 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Framework marquee strip */}
+        {/* Framework strip */}
         <div className="border-t border-ink-200/80 bg-paper/60">
-          <div className="wrap py-5 flex items-center gap-10">
+          <div className="wrap py-5 flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
             <div className="hidden md:block mono-label whitespace-nowrap">
               Frameworks & standards
             </div>
-            <div className="marquee flex-1">
-              <ul className="marquee__track">
-                {[...site.frameworks, ...site.frameworks].map((f, i) => (
-                  <li
-                    key={`${f}-${i}`}
-                    className="font-serif text-[15px] tracking-tightish text-ink-700 whitespace-nowrap"
-                  >
-                    {f}
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <ul className="framework-strip flex-1">
+              {site.frameworks.map((f) => (
+                <li key={f}>{f}</li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
@@ -290,9 +281,7 @@ export default function Home() {
                   }}
                 >
                   <div className="credential-badge" style={{ borderColor: "rgba(247,244,236,0.3)" }}>
-                    <span className="credential-badge__label" style={{ color: "#b3ab93" }}>CIA</span>
-                    <span className="credential-badge__divider" style={{ background: "#b3ab93" }} />
-                    <span className="credential-badge__text" style={{ color: "#b3ab93" }}>Certified Internal Auditor</span>
+                    <span className="credential-badge__text" style={{ color: "#b3ab93" }}>Certified Internal Auditor (CIA)</span>
                   </div>
                 </div>
               </div>

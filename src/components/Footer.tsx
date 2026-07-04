@@ -23,7 +23,7 @@ export default function Footer() {
               </span>
             </p>
             <p className="mt-4 text-[14px] text-ink-500 max-w-xl leading-relaxed">
-              Led by Melodye Harvey, CIA. Serving businesses, nonprofits, government contractors,
+              Led by Melodye Harvey, Certified Internal Auditor (CIA). Serving businesses, nonprofits, government contractors,
               and project-based teams across the United States.
             </p>
             <div className="mt-10">
@@ -74,7 +74,7 @@ export default function Footer() {
           <div className="flex items-center gap-5">
             <span>{site.domain}</span>
             <span className="text-ink-300">·</span>
-            <span>Melodye Harvey, CIA</span>
+            <span>Melodye Harvey, Certified Internal Auditor (CIA)</span>
             <span className="text-ink-300">·</span>
             <span>Confidential by default</span>
           </div>

@@ -3,7 +3,7 @@ export const site = {
   shortName: "BroadPivot",
   tagline: "Pivot with Purpose.",
   description:
-    "BroadPivot Consulting LLC provides strategic consulting in compliance, risk management, business operations, nonprofit leadership, project coordination, construction management, and government contracting — helping organizations structure, adapt, and move forward with purpose.",
+    "BroadPivot Consulting LLC provides strategic consulting in compliance, risk management, business operations, nonprofit leadership, project coordination, construction support, and government contracting — helping organizations structure, adapt, and move forward with purpose.",
   domain: "broadpivotllc.com",
   url: "https://broadpivotllc.com",
   email: "info@broadpivotllc.com",
@@ -56,17 +56,17 @@ export const site = {
     {
       title: "Construction & project-based businesses",
       blurb:
-        "Project coordination, contract compliance, and operational frameworks that keep complex, multi-phase work on track and audit-ready.",
+        "Project coordination, documentation, contract compliance, operational support, and close-out readiness for complex, multi-phase work.",
     },
   ],
   capabilities: [
     {
       title: "Compliance & Risk Management",
       summary:
-        "Rigorous program design, internal audit, and regulatory readiness — led by a Certified Internal Auditor with hands-on experience across HIPAA, SOX, NIST, privacy law, and more.",
+        "Rigorous program design, internal audit, and regulatory readiness — led by a Certified Internal Auditor (CIA) with hands-on experience across HIPAA, SOX, NIST, privacy law, and more.",
       points: [
         "Regulatory gap assessments and remediation roadmaps",
-        "Internal audit planning, execution, and reporting (CIA-led)",
+        "Internal audit planning, execution, and reporting",
         "Third-party and vendor risk management",
         "Privacy program development and data governance",
         "Policy, procedure, and evidence frameworks",
@@ -101,16 +101,16 @@ export const site = {
       ],
     },
     {
-      title: "Project & Construction Management",
+      title: "Project Coordination & Construction Support",
       summary:
-        "Coordination, compliance, and operational support for project-based businesses and construction teams — from planning and permitting through delivery and close-out.",
+        "Project coordination, documentation, contract compliance, operational support, and close-out readiness for project-based businesses and construction-related initiatives.",
       points: [
-        "Project planning, scheduling, and coordination",
+        "Project coordination and schedule support",
         "Contract compliance and documentation management",
-        "Subcontractor management frameworks",
-        "Risk identification and mitigation planning",
-        "Regulatory and permitting compliance support",
-        "Project close-out and lessons-learned documentation",
+        "Vendor and subcontractor documentation workflows",
+        "Operational support and issue tracking",
+        "Close-out readiness and handoff documentation",
+        "Lessons-learned and continuous improvement support",
       ],
     },
     {
@@ -143,7 +143,7 @@ export const site = {
   outcomes: [
     {
       figure: "CIA",
-      unit: "Certified Internal Auditor",
+      unit: "Certified Internal Auditor (CIA)",
       detail: "Rigorous, credentialed audit and risk expertise applied directly to every engagement.",
     },
     {
@@ -154,7 +154,7 @@ export const site = {
     {
       figure: "6",
       unit: "practice areas",
-      detail: "Compliance, operations, nonprofit, project & construction, government contracting, and cybersecurity.",
+      detail: "Compliance, operations, nonprofit, project coordination, construction support, government contracting, and cybersecurity.",
     },
   ],
   principles: [

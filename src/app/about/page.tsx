@@ -94,9 +94,7 @@ export default function AboutPage() {
               Principal Consultant & Founder
             </div>
             <div className="credential-badge mt-3" style={{ borderColor: "rgba(247,244,236,0.3)" }}>
-              <span className="credential-badge__label" style={{ color: "#b3ab93" }}>CIA</span>
-              <span className="credential-badge__divider" style={{ background: "#b3ab93" }} />
-              <span className="credential-badge__text" style={{ color: "#b3ab93" }}>Certified Internal Auditor</span>
+              <span className="credential-badge__text" style={{ color: "#b3ab93" }}>Certified Internal Auditor (CIA)</span>
             </div>
           </div>
         </div>
@@ -133,8 +131,8 @@ export default function AboutPage() {
                 <p>
                   The result is a practice prepared to support business operations, compliance
                   and risk management, nonprofit governance, project coordination, construction
-                  and project management, and government contracting support — for both small
-                  organizations and larger business opportunities.
+                  support, and government contracting support — for both small organizations
+                  and larger business opportunities.
                 </p>
               </div>
             </div>
@@ -156,7 +154,7 @@ export default function AboutPage() {
                     <div className="flex items-center gap-3 border border-ink-200 px-4 py-3">
                       <span className="font-mono text-[11px] font-semibold uppercase tracking-widest" style={{ color: "var(--accent)" }}>CIA</span>
                       <span className="w-px h-4 bg-ink-200" />
-                      <span className="text-[13.5px] text-ink-700">Certified Internal Auditor</span>
+                      <span className="text-[13.5px] text-ink-700">Certified Internal Auditor (CIA)</span>
                     </div>
                     <div className="flex items-center gap-3 border border-ink-200 px-4 py-3">
                       <span className="font-mono text-[11px] font-semibold uppercase tracking-widest" style={{ color: "var(--accent)" }}>Privacy</span>
@@ -296,7 +294,7 @@ export default function AboutPage() {
             <span className="italic text-ink-600">actually shows up?</span>
           </h3>
           <p className="mt-6 text-ink-600 max-w-xl leading-relaxed">
-            Every engagement is led personally by Melodye Harvey, CIA. Reach out to discuss your goals.
+            Every engagement is led personally by Melodye Harvey, Certified Internal Auditor (CIA). Reach out to discuss your goals.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Link href="/contact" className="btn">
