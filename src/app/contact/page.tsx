@@ -36,16 +36,16 @@ export default function ContactPage() {
         <div className="wrap grid gap-16 lg:grid-cols-12 lg:gap-20">
           <div className="lg:col-span-7">
             <form
-              className="space-y-10"
+              className="space-y-11"
               action={`mailto:${site.email}`}
               method="post"
               encType="text/plain"
             >
-              <div className="grid sm:grid-cols-2 gap-8">
+              <div className="grid gap-y-10 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-0">
                 <Field label="Name" name="name" required />
                 <Field label="Organization" name="organization" />
               </div>
-              <div className="grid sm:grid-cols-2 gap-8">
+              <div className="grid gap-y-10 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-0">
                 <Field label="Email" name="email" type="email" required />
                 <Field label="Phone" name="phone" type="tel" />
               </div>
@@ -58,7 +58,7 @@ export default function ContactPage() {
                   id="interest"
                   name="interest"
                   defaultValue=""
-                  className="mt-3 w-full bg-transparent border-b border-ink-300 py-3 text-[15px] text-ink-900 focus:border-ink-900 focus:outline-none"
+                  className="mt-3 min-h-12 w-full bg-transparent border-b border-ink-300 py-3 text-[15px] text-ink-900 focus:border-ink-900 focus:outline-none"
                 >
                   <option value="" disabled>Select one</option>
                   <option>Compliance and Risk Management</option>
@@ -80,7 +80,7 @@ export default function ContactPage() {
                   name="message"
                   rows={6}
                   required
-                  className="mt-3 w-full bg-transparent border-b border-ink-300 py-3 text-[15px] text-ink-900 placeholder:text-ink-400 focus:border-ink-900 focus:outline-none resize-none leading-relaxed"
+                  className="mt-3 min-h-[170px] w-full bg-transparent border-b border-ink-300 py-3 text-[15px] text-ink-900 placeholder:text-ink-400 focus:border-ink-900 focus:outline-none resize-none leading-relaxed"
                   placeholder="Briefly describe your environment, timeline, and what success looks like."
                 />
               </div>
@@ -156,7 +156,7 @@ function Field({
         type={type}
         name={name}
         required={required}
-        className="mt-3 w-full bg-transparent border-b border-ink-300 py-3 text-[15px] text-ink-900 placeholder:text-ink-400 focus:border-ink-900 focus:outline-none"
+        className="mt-3 min-h-12 w-full bg-transparent border-b border-ink-300 py-3 text-[15px] text-ink-900 placeholder:text-ink-400 focus:border-ink-900 focus:outline-none"
       />
     </label>
   );

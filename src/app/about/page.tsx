@@ -26,7 +26,7 @@ export default function AboutPage() {
                 A practice built around
                 {" "}
                 <span className="italic text-ink-700 leading-[1.1] pb-1 inline-block">
-                  purpose and people.
+                  practical clarity.
                 </span>
               </h1>
 
@@ -119,7 +119,7 @@ export default function AboutPage() {
                   Throughout her career, Melodye Harvey has worked with organizations that
                   needed stronger structure, clearer processes, better compliance practices,
                   and practical support to move initiatives forward. The perspective behind
-                  BroadPivot is rooted in helping organizations pivot with purpose.
+                  BroadPivot is rooted in practical solutions for complex work.
                 </p>
                 <p>
                   Many businesses, nonprofits, and public-sector partners have the goals,

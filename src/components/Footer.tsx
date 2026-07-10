@@ -19,7 +19,7 @@ export default function Footer() {
               structure, adapt, and move forward
               {" "}
               <span className="italic text-ink-600 leading-[1.1] pb-1 inline-block">
-                with purpose.
+                with practical clarity.
               </span>
             </p>
             <p className="mt-4 text-[14px] text-ink-500 max-w-xl leading-relaxed">

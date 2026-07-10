@@ -130,14 +130,14 @@ export default function GovPage() {
               </div>
               <h2 className="display-sm max-w-2xl">BroadPivot capability statement.</h2>
               <p className="mt-6 text-ink-600 leading-relaxed max-w-2xl">
-                A downloadable capability statement will be available here once finalized
-                for visitors who need a concise overview of BroadPivot&apos;s services,
-                leadership, and government-related support.
+                BroadPivot&apos;s capability statement is available for organizations
+                that need a concise overview of services, leadership, and
+                government-related support.
               </p>
             </div>
             <div className="lg:col-span-4 lg:text-right">
               <button className="btn-ghost opacity-70 cursor-not-allowed" type="button" disabled>
-                Download coming soon
+                Capability statement available upon request
               </button>
             </div>
           </div>

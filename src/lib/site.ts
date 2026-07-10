@@ -1,9 +1,9 @@
 export const site = {
   name: "BroadPivot Consulting LLC",
   shortName: "BroadPivot",
-  tagline: "Pivot with Purpose.",
+  tagline: "Practical Solutions for Complex Work.",
   description:
-    "BroadPivot Consulting LLC provides strategic consulting in compliance, risk management, business operations, nonprofit leadership, project coordination, construction support, and government contracting — helping organizations structure, adapt, and move forward with purpose.",
+    "BroadPivot Consulting LLC provides practical consulting support across compliance, operations, nonprofit governance, project coordination, construction support, and government-facing work.",
   domain: "broadpivotllc.com",
   url: "https://broadpivotllc.com",
   email: "info@broadpivotllc.com",
@@ -11,7 +11,7 @@ export const site = {
     name: "Melodye Harvey",
     credential: "MBA, MSL, CIA",
     title: "Principal Consultant & Founder",
-    bio: "Melodye Harvey, MBA, MSL, CIA, is a senior consultant with more than 30 years of experience across compliance, audit, privacy, healthcare, nonprofit governance, operations, cybersecurity, and project support. She founded BroadPivot to help organizations pivot with purpose — bringing structure, strategy, and hands-on execution support to businesses, nonprofits, project-based teams, construction initiatives, and government-related work.",
+    bio: "Melodye Harvey, MBA, MSL, CIA, is a senior consultant with more than 30 years of experience across compliance, audit, privacy, healthcare, nonprofit governance, operations, cybersecurity, and project support. She founded BroadPivot to bring structure, practical strategy, and hands-on execution support to businesses, nonprofits, project-based teams, construction initiatives, and government-related work.",
   },
   nav: [
     { label: "About", href: "/about" },
@@ -41,12 +41,12 @@ export const site = {
     {
       title: "Businesses of all sizes",
       blurb:
-        "From growing small businesses to established enterprises — strategic consulting on operations, compliance, and risk that scales with your goals and stage.",
+        "Practical support for operations, compliance, and risk management that scales with your goals and stage.",
     },
     {
       title: "Nonprofits & mission-driven organizations",
       blurb:
-        "Governance, grant compliance, audit readiness, and operational structure that lets nonprofits focus energy where it matters most: their mission.",
+        "Governance, grant compliance, audit readiness, and operational structure that support mission-focused work.",
     },
     {
       title: "Public sector & government contractors",
@@ -63,7 +63,7 @@ export const site = {
     {
       title: "Compliance & Risk Management",
       summary:
-        "Rigorous program design, internal audit, and regulatory readiness — led by a Certified Internal Auditor (CIA) with hands-on experience across HIPAA, SOX, NIST, privacy law, and more.",
+        "Compliance program support, internal audit perspective, and practical control guidance led by a Certified Internal Auditor (CIA).",
       points: [
         "Regulatory gap assessments and remediation roadmaps",
         "Internal audit planning, execution, and reporting",
@@ -77,7 +77,7 @@ export const site = {
     {
       title: "Business Operations & Process Improvement",
       summary:
-        "Workflows, systems, and documentation that bring structure, clarity, and sustainability to how your organization actually runs — at any scale.",
+        "Workflow, process, and documentation support that helps teams operate with clearer structure and accountability.",
       points: [
         "Process mapping and operational redesign",
         "Standard operating procedures (SOPs) and documentation",
@@ -90,7 +90,7 @@ export const site = {
     {
       title: "Nonprofit & Mission-Driven Organization Support",
       summary:
-        "Strategic and operational support for nonprofits, foundations, and mission-driven organizations navigating leadership, compliance requirements, and growth.",
+        "Operational, governance, and compliance support for nonprofits, foundations, and mission-driven organizations.",
       points: [
         "Nonprofit governance and board relations support",
         "Grant compliance and federal award management (2 CFR Part 200)",
@@ -116,7 +116,7 @@ export const site = {
     {
       title: "Government Contracting Support",
       summary:
-        "Broad audit, compliance, documentation, and operational support for organizations pursuing or performing federal, state, local, or government-adjacent work.",
+        "Documentation, audit readiness, internal controls, project coordination, vendor support, and contract performance support for government-related work.",
       points: [
         "Audit and compliance support for government-related requirements",
         "Documentation, evidence, and reporting workflows",
@@ -129,7 +129,7 @@ export const site = {
     {
       title: "Cybersecurity & Information Security",
       summary:
-        "Security programs and data protection strategies right-sized for the organization — from policy frameworks to technical control reviews.",
+        "Information security and privacy support focused on practical policies, controls, documentation, and readiness planning.",
       points: [
         "Security program assessment and maturity roadmaps",
         "Data classification, privacy, and protection",
@@ -159,9 +159,9 @@ export const site = {
   ],
   principles: [
     {
-      title: "Pivot with purpose",
+      title: "Practical solutions",
       body:
-        "BroadPivot was built on the belief that organizations can move decisively — with the right structure, strategy, and support in place. Every engagement is designed to help you move forward with clarity.",
+        "BroadPivot helps organizations turn complex requirements and moving parts into practical plans, documentation, and workflows.",
     },
     {
       title: "Senior, hands-on delivery",

@@ -17,7 +17,7 @@ export default function Home() {
             <div className="pb-20 lg:pb-28 hero-drift">
               <div className="flex flex-wrap items-center gap-3">
                 <span className="h-px w-10 bg-accent-warm" />
-                <span className="eyebrow">Pivot with Purpose · United States</span>
+                <span className="eyebrow">Practical Solutions for Complex Work</span>
                 <span className="credential-badge ml-2">
                   <span className="credential-badge__text">Certified Internal Auditor (CIA)</span>
                 </span>
@@ -32,10 +32,9 @@ export default function Home() {
               </h1>
 
               <p className="lede mt-8 max-w-xl">
-                BroadPivot partners with businesses, nonprofits, project-based teams,
-                construction and project management initiatives, and organizations
-                pursuing government-related work to strengthen operations, manage risk,
-                coordinate complex work, and grow with purpose.
+                BroadPivot helps businesses, nonprofits, project teams, and
+                government-facing organizations strengthen operations, manage risk,
+                document the work, and keep complex initiatives moving.
               </p>
 
               <div className="mt-10 flex flex-wrap items-center gap-4">
@@ -91,10 +90,10 @@ export default function Home() {
         <div className="border-t border-ink-200/80 bg-paper/60">
           <div className="wrap py-5 flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
             <div className="hidden md:block mono-label whitespace-nowrap">
-              Frameworks & standards
+              Selected frameworks
             </div>
             <ul className="framework-strip flex-1">
-              {site.frameworks.map((f) => (
+              {site.frameworks.slice(0, 8).map((f) => (
                 <li key={f}>{f}</li>
               ))}
             </ul>
@@ -102,27 +101,26 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ============ 2. PIVOT WITH PURPOSE — brand statement ============== */}
+      {/* ============ 2. PRACTICAL SOLUTIONS — brand statement ============ */}
       <section className="border-b border-ink-200/80 bg-paperDeep/50">
         <div className="wrap py-16 lg:py-20">
           <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-center">
             <div className="lg:col-span-5">
               <div className="flex items-center gap-3">
                 <span className="h-px w-8 bg-accent-warm" />
-                <span className="eyebrow">Our philosophy</span>
+                <span className="eyebrow">Our approach</span>
               </div>
               <h2 className="display-sm mt-6">
-                Pivot with{" "}
-                <span className="italic text-ink-600">Purpose.</span>
+                Practical solutions for{" "}
+                <span className="italic text-ink-600">complex work.</span>
               </h2>
             </div>
             <div className="lg:col-span-7">
               <p className="font-serif text-[1.2rem] text-ink-700 leading-[1.6] tracking-tightish">
-                Many organizations have the goals, the ideas, and the responsibilities in place —
-                but need support organizing the work, managing risk, strengthening operations,
-                and building systems that are sustainable. BroadPivot provides flexible,
-                strategic, and hands-on consulting support to help organizations move forward
-                with clarity and confidence.
+                Many organizations know what needs to get done, but need help organizing
+                the details, documenting the work, managing risk, and building processes
+                that teams can maintain. BroadPivot provides practical, senior-led support
+                for that work.
               </p>
               <div className="mt-8 grid sm:grid-cols-2 gap-4">
                 {[
@@ -300,9 +298,9 @@ export default function Home() {
 
               <blockquote className="mt-8 accent-left">
                 <p className="font-serif text-[1.2rem] sm:text-[1.4rem] leading-[1.4] tracking-tightish text-paper/90 italic">
-                  &ldquo;I started BroadPivot to provide the type of flexible, strategic,
-                  and hands-on consulting support that organizations need to pivot with
-                  purpose — and to actually move forward.&rdquo;
+                  &ldquo;I started BroadPivot to provide practical, senior-led consulting
+                  support for organizations managing complex compliance, operations,
+                  project, and governance work.&rdquo;
                 </p>
               </blockquote>
 

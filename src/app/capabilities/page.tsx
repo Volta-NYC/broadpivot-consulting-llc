@@ -153,8 +153,8 @@ export default function CapabilitiesPage() {
             <span className="italic text-ink-600">routinely operate in.</span>
           </h2>
           <p className="mt-6 text-ink-600 leading-relaxed max-w-2xl">
-            The acronym soup, demystified. We map each requirement to controls
-            your team can actually run and your auditor can verify.
+            We translate complex requirements into practical controls, documentation,
+            and workflows your team can maintain.
           </p>
 
           <ul className="mt-14 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 stagger">
