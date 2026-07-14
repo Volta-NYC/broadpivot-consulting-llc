@@ -233,122 +233,90 @@ body::before {
 /* Scroll-driven progressive enhancement */
 @media (prefers-reduced-motion: no-preference) {
   .scroll-reveal {
+    --reveal-x: 0px;
+    --reveal-y: 20px;
+    --reveal-tilt: 0deg;
+    --reveal-delay: 0ms;
     opacity: 0;
+    clip-path: inset(0 0 18% 0 round 2px);
+    filter: blur(9px) saturate(0.84) contrast(0.97);
+    transform: translate3d(var(--reveal-x), var(--reveal-y), 0) rotate(var(--reveal-tilt)) scale(0.987);
+    transform-origin: 50% 72%;
     transition:
-      opacity 700ms var(--ease-out),
-      transform 700ms var(--ease-out);
-    will-change: opacity, transform;
+      clip-path 860ms var(--ease-drawer),
+      filter 760ms var(--ease-out),
+      opacity 480ms var(--ease-out),
+      transform 900ms var(--ease-drawer);
+    transition-delay: var(--reveal-delay);
+    will-change: clip-path, filter, opacity, transform;
   }
-  .scroll-reveal--left { transform: translateX(-28px); }
-  .scroll-reveal--right { transform: translateX(28px); }
-  .scroll-reveal--up { transform: translateY(16px); }
-  .scroll-reveal--fade { transform: none; }
+  .scroll-reveal--left { --reveal-x: -36px; --reveal-tilt: -0.7deg; }
+  .scroll-reveal--right { --reveal-x: 36px; --reveal-tilt: 0.7deg; }
+  .scroll-reveal--up { --reveal-y: 24px; --reveal-tilt: 0.35deg; }
+  .scroll-reveal--fade { --reveal-y: 10px; }
   .scroll-reveal.is-visible {
     opacity: 1;
-    transform: translate(0, 0);
+    clip-path: inset(-2% -2% -2% -2% round 0);
+    filter: blur(0) saturate(1) contrast(1);
+    transform: translate3d(0, 0, 0) rotate(0) scale(1);
   }
 
-  @supports (animation-timeline: view()) {
-    .reveal {
-      animation: reveal-up linear both;
-      animation-timeline: view();
-      animation-range: entry 0% cover 28%;
-    }
-    .reveal-left {
-      animation: reveal-left linear both;
-      animation-timeline: view();
-      animation-range: entry 0% cover 32%;
-    }
-    .reveal-right {
-      animation: reveal-right linear both;
-      animation-timeline: view();
-      animation-range: entry 0% cover 32%;
-    }
-    .reveal-soft {
-      animation: reveal-fade linear both;
-      animation-timeline: view();
-      animation-range: entry 0% cover 35%;
-    }
-    .stagger > * {
-      animation: reveal-left linear both;
-      animation-timeline: view();
-      animation-range: entry 5% cover 30%;
-    }
-    .stagger > *:nth-child(even) { animation-name: reveal-right; }
-    .stagger > *:nth-child(2) { animation-range: entry 8% cover 30%; }
-    .stagger > *:nth-child(3) { animation-range: entry 11% cover 30%; }
-    .stagger > *:nth-child(4) { animation-range: entry 14% cover 30%; }
-    .stagger > *:nth-child(5) { animation-range: entry 17% cover 30%; }
-    .stagger > *:nth-child(6) { animation-range: entry 20% cover 30%; }
+  .scroll-reveal--title,
+  .scroll-reveal--text,
+  .scroll-reveal--card {
+    position: relative;
+    isolation: isolate;
+  }
 
-    main section :where(.display, .display-sm, .display-xs) {
-      animation: reveal-left linear both;
-      animation-timeline: view();
-      animation-range: entry 0% cover 30%;
-    }
-    main section :where(.lede, .body-prose, .accent-left) {
-      animation: reveal-right linear both;
-      animation-timeline: view();
-      animation-range: entry 0% cover 34%;
-    }
-    main section :where(p, blockquote, form > div, aside > div, dl > div) {
-      animation: reveal-text linear both;
-      animation-timeline: view();
-      animation-range: entry 0% cover 32%;
-    }
-    main section :where(.stagger *, .cap-card p, .body-prose p, blockquote p) {
-      animation-name: none;
-    }
+  .scroll-reveal--title::after,
+  .scroll-reveal--text::after,
+  .scroll-reveal--card::after {
+    content: "";
+    position: absolute;
+    inset: -8% -14%;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0;
+    background: linear-gradient(105deg, transparent 30%, rgb(247 244 236 / 0.52) 46%, rgb(168 85 42 / 0.14) 53%, transparent 68%);
+    transform: translateX(-118%) skewX(-12deg);
+  }
 
-    .scroll-progress {
-      position: fixed;
-      inset: 0 auto auto 0;
-      height: 2px;
-      width: 100%;
-      transform-origin: 0 50%;
-      background: var(--ink-900);
-      z-index: 60;
-      animation: progress linear;
-      animation-timeline: scroll(root);
-    }
+  .scroll-reveal--card::after {
+    background: linear-gradient(105deg, transparent 28%, rgb(47 143 176 / 0.1) 45%, rgb(168 85 42 / 0.17) 54%, transparent 70%);
+  }
 
-    .hero-drift {
-      animation: drift linear both;
-      animation-timeline: view();
-      animation-range: cover 0% cover 100%;
-    }
+  .scroll-reveal--card.is-visible {
+    box-shadow: 0 14px 34px rgb(31 58 82 / 0.06);
+    transition: box-shadow 700ms var(--ease-out), clip-path 860ms var(--ease-drawer), filter 760ms var(--ease-out), opacity 480ms var(--ease-out), transform 900ms var(--ease-drawer);
+  }
 
-    main section > .wrap {
-      animation: section-rise linear both;
-      animation-timeline: view();
-      animation-range: entry 0% cover 24%;
-    }
+  .scroll-reveal.is-visible::after {
+    animation: reveal-sheen 920ms var(--ease-drawer) calc(var(--reveal-delay) + 120ms) both;
+  }
 
-    main section:nth-of-type(even) > .wrap {
-      animation-name: section-fade-rise;
-    }
+  .scroll-progress {
+    position: fixed;
+    inset: 0 auto auto 0;
+    height: 2px;
+    width: 100%;
+    transform-origin: 0 50%;
+    background: var(--ink-900);
+    z-index: 60;
+    animation: progress linear;
+    animation-timeline: scroll(root);
+  }
+
+  .hero-drift {
+    animation: drift linear both;
+    animation-timeline: view();
+    animation-range: cover 0% cover 100%;
   }
 }
 
-@keyframes reveal-up {
-  from { opacity: 0; transform: translateY(14px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-@keyframes reveal-left {
-  from { opacity: 0; transform: translateX(-28px); }
-  to   { opacity: 1; transform: translateX(0); }
-}
-@keyframes reveal-right {
-  from { opacity: 0; transform: translateX(28px); }
-  to   { opacity: 1; transform: translateX(0); }
-}
-@keyframes reveal-text {
-  from { opacity: 0; transform: translateY(12px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-@keyframes reveal-fade {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+@keyframes reveal-sheen {
+  0% { opacity: 0; transform: translateX(-118%) skewX(-12deg); }
+  30% { opacity: 0.9; }
+  100% { opacity: 0; transform: translateX(118%) skewX(-12deg); }
 }
 @keyframes progress {
   from { transform: scaleX(0); }
@@ -357,14 +325,6 @@ body::before {
 @keyframes drift {
   from { transform: translateY(0); }
   to   { transform: translateY(-18px); }
-}
-@keyframes section-rise {
-  from { opacity: 0.86; transform: translateY(18px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-@keyframes section-fade-rise {
-  from { opacity: 0.78; transform: translateY(12px); }
-  to   { opacity: 1; transform: translateY(0); }
 }
 
 :where(a, button, input, select, textarea):focus-visible {

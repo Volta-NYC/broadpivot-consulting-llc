@@ -33,6 +33,17 @@ function directionFor(el: Element, index: number) {
   return index % 2 === 0 ? "left" : "right";
 }
 
+function kindFor(el: Element) {
+  if (el.classList.contains("cap-card") || el.matches(".stagger > *")) {
+    return "card";
+  }
+  if (el.matches(".display, .display-sm, .display-xs")) return "title";
+  if (el.matches(".lede, p, blockquote, form > div, aside > div, dl > div")) {
+    return "text";
+  }
+  return "panel";
+}
+
 export default function ScrollReveal() {
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
@@ -50,7 +61,14 @@ export default function ScrollReveal() {
     });
 
     elements.forEach((el, index) => {
-      el.classList.add("scroll-reveal", `scroll-reveal--${directionFor(el, index)}`);
+      el.classList.add(
+        "scroll-reveal",
+        `scroll-reveal--${directionFor(el, index)}`,
+        `scroll-reveal--${kindFor(el)}`,
+      );
+      if (el instanceof HTMLElement) {
+        el.style.setProperty("--reveal-delay", `${(index % 5) * 55}ms`);
+      }
     });
 
     const observer = new IntersectionObserver(
