@@ -232,6 +232,22 @@ body::before {
 
 /* Scroll-driven progressive enhancement */
 @media (prefers-reduced-motion: no-preference) {
+  .scroll-reveal {
+    opacity: 0;
+    transition:
+      opacity 700ms var(--ease-out),
+      transform 700ms var(--ease-out);
+    will-change: opacity, transform;
+  }
+  .scroll-reveal--left { transform: translateX(-28px); }
+  .scroll-reveal--right { transform: translateX(28px); }
+  .scroll-reveal--up { transform: translateY(16px); }
+  .scroll-reveal--fade { transform: none; }
+  .scroll-reveal.is-visible {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
   @supports (animation-timeline: view()) {
     .reveal {
       animation: reveal-up linear both;
