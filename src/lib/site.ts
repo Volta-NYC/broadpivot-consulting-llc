@@ -7,6 +7,7 @@ export const site = {
   domain: "broadpivotllc.com",
   url: "https://broadpivotllc.com",
   email: "info@broadpivotllc.com",
+  linkedin: "https://www.linkedin.com/company/broadpivot-consulting-llc/",
   practitioner: {
     name: "Melodye Harvey",
     credential: "MBA, MSL, CIA",
@@ -33,31 +34,8 @@ export const site = {
     "PCI-DSS",
     "IIA Standards",
     "2 CFR Part 200",
-    "OMB A-133",
     "GDPR",
     "CCPA",
-  ],
-  whoWeServe: [
-    {
-      title: "Businesses of all sizes",
-      blurb:
-        "Practical support for operations, compliance, and risk management that scales with your goals and stage.",
-    },
-    {
-      title: "Nonprofits & mission-driven organizations",
-      blurb:
-        "Governance, grant compliance, audit readiness, and operational structure that support mission-focused work.",
-    },
-    {
-      title: "Public sector & government contractors",
-      blurb:
-        "Audit, compliance, documentation, internal controls, and performance support for organizations pursuing or performing government-related work.",
-    },
-    {
-      title: "Construction & project-based businesses",
-      blurb:
-        "Project coordination, documentation, contract compliance, operational support, and close-out readiness for complex, multi-phase work.",
-    },
   ],
   capabilities: [
     {
@@ -94,7 +72,6 @@ export const site = {
       points: [
         "Nonprofit governance and board relations support",
         "Grant compliance and federal award management (2 CFR Part 200)",
-        "Single Audit / OMB A-133 readiness",
         "Strategic planning and initiative execution",
         "Organizational capacity-building and leadership support",
         "Internal controls for nonprofit environments",
@@ -166,7 +143,7 @@ export const site = {
     {
       title: "Senior, hands-on delivery",
       body:
-        "Every engagement is led by Melodye Harvey, MBA, MSL, CIA, directly. No delegates, no hand-offs to junior staff. You work with the practitioner doing the work.",
+        "Every engagement receives direct senior-level leadership and oversight. Specialized resources and strategic partners may be included when appropriate.",
     },
     {
       title: "Adaptable and right-sized",
@@ -176,7 +153,7 @@ export const site = {
     {
       title: "Trusted partnership",
       body:
-        "BroadPivot works as an embedded extension of your team, with steady expert delivery, no theatrical reporting cycles, and a quiet commitment to your success.",
+        "BroadPivot works as an embedded extension of your team, with clear communication, practical reporting, and consistent follow-through.",
     },
   ],
 } as const;

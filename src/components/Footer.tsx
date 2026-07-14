@@ -62,6 +62,17 @@ export default function Footer() {
                 </li>
                 <li className="text-ink-500">United States</li>
                 <li className="text-ink-500">Response within 1 business day</li>
+                <li>
+                  <a
+                    href={site.linkedin}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-ink-900"
+                    style={{ transition: "color 200ms var(--ease-drawer)" }}
+                  >
+                    LinkedIn
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
@@ -77,6 +88,16 @@ export default function Footer() {
             <span>Melodye Harvey, Certified Internal Auditor (CIA)</span>
             <span className="text-ink-300">·</span>
             <span>Confidential by default</span>
+            <span className="text-ink-300">·</span>
+            <a
+              href={site.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-ink-900"
+              style={{ transition: "color 200ms var(--ease-drawer)" }}
+            >
+              LinkedIn
+            </a>
           </div>
         </div>
       </div>

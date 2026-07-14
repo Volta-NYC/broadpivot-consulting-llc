@@ -230,27 +230,11 @@ export default function Home() {
             <span className="italic text-ink-600">actually matter.</span>
           </h2>
           <p className="mt-6 text-ink-600 leading-relaxed max-w-2xl">
-            BroadPivot supports both small organizations and larger business opportunities.
-            Our language and approach are never limiting — we are positioned as a trusted
-            partner capable of scaling with you.
+            BroadPivot supports businesses, nonprofits, government contractors,
+            public-sector organizations, and project-based teams. We tailor our
+            approach to each client&apos;s goals, operating environment, and level
+            of complexity.
           </p>
-
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 stagger">
-            {site.whoWeServe.map((w) => (
-              <div
-                key={w.title}
-                className="border border-ink-200 p-6"
-                style={{ transition: "border-color 220ms var(--ease-drawer)" }}
-              >
-                <h3 className="font-serif text-[1.1rem] tracking-tightish text-ink-900 leading-tight">
-                  {w.title}
-                </h3>
-                <p className="mt-4 text-[14px] text-ink-600 leading-relaxed">
-                  {w.blurb}
-                </p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 

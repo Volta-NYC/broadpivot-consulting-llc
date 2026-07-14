@@ -60,9 +60,10 @@ export default function GovPage() {
 
           <p className="lede mt-8 max-w-2xl">
             BroadPivot supports organizations pursuing or performing federal,
-            state, local, and government-adjacent work with audit, compliance,
-            documentation, operational readiness, internal controls, project
-            coordination, risk management, vendor support, and contract performance support.
+            state, local, public-sector, government-funded, and
+            government-contracted work with audit, compliance, documentation,
+            operational readiness, internal controls, project coordination, risk
+            management, vendor support, and contract performance support.
           </p>
         </div>
       </section>

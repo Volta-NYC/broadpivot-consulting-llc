@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     url: site.url,
     siteName: site.name,
   },
-  icons: { icon: "/brand/broadpivot-favicon.svg" },
+  icons: { icon: "/brand/broadpivot-favicon-simple.svg" },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

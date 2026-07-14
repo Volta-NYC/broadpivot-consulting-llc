@@ -1,0 +1,9 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>BroadPivot Consulting icon black and white</title>
+  <path d="M256 28 453 142v228L256 484 59 370V142L256 28Z" fill="#111111"/>
+  <path d="M256 68 418 162v188L256 444 94 350V162L256 68Z" fill="#ffffff"/>
+  <path d="M256 105c-52 42-78 85-78 130 0 28 8 51 25 70-34-6-68 2-103 25 31 38 69 57 113 57 17 0 31-3 43-8 12 5 26 8 43 8 44 0 82-19 113-57-35-23-69-31-103-25 17-19 25-42 25-70 0-45-26-88-78-130Z" fill="#111111"/>
+  <path d="M256 194a58 58 0 1 1 0 116 58 58 0 0 1 0-116Z" fill="#ffffff"/>
+  <path d="M256 113v81M256 310v81M141 252h57M314 252h57" stroke="#111111" stroke-width="21" stroke-linecap="round"/>
+  <path d="M256 216v72" stroke="#111111" stroke-width="22" stroke-linecap="round"/>
+</svg>
