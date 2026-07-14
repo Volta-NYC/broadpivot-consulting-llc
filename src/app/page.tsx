@@ -54,7 +54,7 @@ export default function Home() {
             </div>
 
             {/* RIGHT: Melodye's headshot */}
-            <div className="hidden lg:flex justify-center lg:justify-end items-end lg:-translate-y-32">
+            <div className="hidden lg:flex justify-center lg:justify-end items-end lg:-translate-y-40">
               <div className="photo-frame relative" style={{ maxWidth: 400 }}>
                 <Image
                   src="/images/melodye-harvey.png"
