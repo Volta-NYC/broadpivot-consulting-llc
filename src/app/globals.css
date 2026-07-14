@@ -243,10 +243,10 @@ body::before {
     transform: translate3d(var(--reveal-x), var(--reveal-y), 0) rotate(var(--reveal-tilt)) scale(0.987);
     transform-origin: 50% 72%;
     transition:
-      clip-path 860ms var(--ease-drawer),
-      filter 760ms var(--ease-out),
-      opacity 480ms var(--ease-out),
-      transform 900ms var(--ease-drawer);
+      clip-path 1250ms var(--ease-drawer),
+      filter 1100ms var(--ease-out),
+      opacity 760ms var(--ease-out),
+      transform 1350ms var(--ease-drawer);
     transition-delay: var(--reveal-delay);
     will-change: clip-path, filter, opacity, transform;
   }
@@ -261,37 +261,14 @@ body::before {
     transform: translate3d(0, 0, 0) rotate(0) scale(1);
   }
 
-  .scroll-reveal--title,
-  .scroll-reveal--text,
-  .scroll-reveal--card {
-    position: relative;
-    isolation: isolate;
-  }
-
-  .scroll-reveal--title::after,
-  .scroll-reveal--text::after,
-  .scroll-reveal--card::after {
-    content: "";
-    position: absolute;
-    inset: -8% -14%;
-    z-index: 1;
-    pointer-events: none;
-    opacity: 0;
-    background: linear-gradient(105deg, transparent 30%, rgb(247 244 236 / 0.52) 46%, rgb(168 85 42 / 0.14) 53%, transparent 68%);
-    transform: translateX(-118%) skewX(-12deg);
-  }
-
-  .scroll-reveal--card::after {
-    background: linear-gradient(105deg, transparent 28%, rgb(47 143 176 / 0.1) 45%, rgb(168 85 42 / 0.17) 54%, transparent 70%);
-  }
-
   .scroll-reveal--card.is-visible {
     box-shadow: 0 14px 34px rgb(31 58 82 / 0.06);
-    transition: box-shadow 700ms var(--ease-out), clip-path 860ms var(--ease-drawer), filter 760ms var(--ease-out), opacity 480ms var(--ease-out), transform 900ms var(--ease-drawer);
-  }
-
-  .scroll-reveal.is-visible::after {
-    animation: reveal-sheen 920ms var(--ease-drawer) calc(var(--reveal-delay) + 120ms) both;
+    transition:
+      box-shadow 1000ms var(--ease-out),
+      clip-path 1250ms var(--ease-drawer),
+      filter 1100ms var(--ease-out),
+      opacity 760ms var(--ease-out),
+      transform 1350ms var(--ease-drawer);
   }
 
   .scroll-progress {
@@ -313,11 +290,6 @@ body::before {
   }
 }
 
-@keyframes reveal-sheen {
-  0% { opacity: 0; transform: translateX(-118%) skewX(-12deg); }
-  30% { opacity: 0.9; }
-  100% { opacity: 0; transform: translateX(118%) skewX(-12deg); }
-}
 @keyframes progress {
   from { transform: scaleX(0); }
   to   { transform: scaleX(1); }

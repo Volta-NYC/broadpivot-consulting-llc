@@ -67,7 +67,7 @@ export default function ScrollReveal() {
         `scroll-reveal--${kindFor(el)}`,
       );
       if (el instanceof HTMLElement) {
-        el.style.setProperty("--reveal-delay", `${(index % 5) * 55}ms`);
+        el.style.setProperty("--reveal-delay", `${(index % 5) * 75}ms`);
       }
     });
 
