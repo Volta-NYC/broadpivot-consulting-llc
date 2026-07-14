@@ -8,6 +8,7 @@ export const site = {
   url: "https://broadpivotllc.com",
   email: "info@broadpivotllc.com",
   linkedin: "https://www.linkedin.com/company/broadpivot-consulting-llc/",
+  voltaUrl: "https://voltanyc.org/",
   practitioner: {
     name: "Melodye Harvey",
     credential: "MBA, MSL, CIA",

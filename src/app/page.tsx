@@ -159,9 +159,9 @@ export default function Home() {
             <span className="italic text-ink-600">consulting partner.</span>
           </h2>
           <p className="mt-6 text-ink-600 leading-relaxed max-w-2xl">
-            Every engagement is staffed and led by Melodye Harvey, MBA, MSL, CIA —
-            not delegated to junior staff. You work directly with the practitioner
-            doing the work.
+            Every engagement receives direct senior-level leadership and
+            oversight. Specialized resources and strategic partners may be
+            included when appropriate.
           </p>
 
           <div className="mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 stagger">

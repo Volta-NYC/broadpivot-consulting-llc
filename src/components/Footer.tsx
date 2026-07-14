@@ -81,7 +81,18 @@ export default function Footer() {
 
       <div className="border-t border-ink-200">
         <div className="wrap py-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-[12px] text-ink-500">
-          <div>© {new Date().getFullYear()} BroadPivot Consulting LLC. All rights reserved.</div>
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+            <span>© {new Date().getFullYear()} BroadPivot Consulting LLC. All rights reserved.</span>
+            <a
+              href={site.voltaUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-ink-900"
+              style={{ transition: "color 200ms var(--ease-drawer)" }}
+            >
+              Made by Volta
+            </a>
+          </div>
           <div className="flex items-center gap-5">
             <span>{site.domain}</span>
             <span className="text-ink-300">·</span>
