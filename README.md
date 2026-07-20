@@ -25,7 +25,19 @@ vercel              # follow prompts
 vercel --prod       # production deploy
 ```
 
-No environment variables are required.
+### Contact form email
+
+The contact form sends to `info@broadpivotllc.com` through Resend. Before
+deploying, create a Resend account, verify `broadpivotllc.com`, and add the
+following environment variables in Vercel:
+
+```bash
+RESEND_API_KEY=re_replace_with_your_key
+CONTACT_FROM_EMAIL="BroadPivot Website <website@broadpivotllc.com>"
+```
+
+See `.env.example` for the same local-development template. The API key must
+remain in environment variables and must never be committed.
 
 ## Stack
 

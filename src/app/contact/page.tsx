@@ -1,5 +1,6 @@
 import { site } from "@/lib/site";
 import { BlueprintBackdrop } from "@/components/Backdrop";
+import ContactForm from "@/components/ContactForm";
 
 export const metadata = { title: "Contact" };
 
@@ -34,72 +35,7 @@ export default function ContactPage() {
       <section className="py-20 lg:py-28">
         <div className="wrap grid gap-16 lg:grid-cols-12 lg:gap-20">
           <div className="lg:col-span-7">
-            <form
-              className="space-y-11"
-              action={`mailto:${site.email}`}
-              method="post"
-              encType="text/plain"
-            >
-              <div className="grid gap-y-10 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-0">
-                <Field label="Name" name="name" required />
-                <Field label="Organization" name="organization" />
-              </div>
-              <div className="grid gap-y-10 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-0">
-                <Field label="Email" name="email" type="email" required />
-                <Field label="Phone" name="phone" type="tel" />
-              </div>
-
-              <div>
-                <label className="eyebrow" htmlFor="interest">
-                  Area of interest
-                </label>
-                <select
-                  id="interest"
-                  name="interest"
-                  defaultValue=""
-                  className="mt-3 min-h-12 w-full bg-transparent border-b border-ink-300 py-3 text-[15px] text-ink-900 focus:border-ink-900 focus:outline-none"
-                >
-                  <option value="" disabled>Select one</option>
-                  <option>Compliance and Risk Management</option>
-                  <option>Nonprofit Support</option>
-                  <option>Project / Construction Management Support</option>
-                  <option>Government Contracting Support</option>
-                  <option>General Business Operations Support</option>
-                  <option>Cybersecurity and Privacy Support</option>
-                  <option>Not sure yet. Let&apos;s discuss.</option>
-                </select>
-              </div>
-
-              <div>
-                <label className="eyebrow" htmlFor="message">
-                  How can we help
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={6}
-                  required
-                  className="mt-3 min-h-[170px] w-full bg-transparent border-b border-ink-300 py-3 text-[15px] text-ink-900 placeholder:text-ink-400 focus:border-ink-900 focus:outline-none resize-none leading-relaxed"
-                  placeholder="Briefly describe your environment, timeline, and what success looks like."
-                />
-                <p className="mt-4 border-l-2 border-accent-warm pl-4 text-[13px] text-ink-600 leading-relaxed">
-                  Please do not submit sensitive personal, financial, health, security, or confidential information through this form.
-                </p>
-              </div>
-
-              <div className="pt-2 flex items-center gap-6 flex-wrap">
-                <button type="submit" className="btn">Send message</button>
-                <p className="text-[13px] text-ink-500 max-w-sm leading-relaxed">
-                  Or write directly:{" "}
-                  <a
-                    href={`mailto:${site.email}`}
-                    className="text-ink-800 underline underline-offset-4 decoration-ink-300 hover:decoration-ink-900"
-                  >
-                    {site.email}
-                  </a>
-                </p>
-              </div>
-            </form>
+            <ContactForm email={site.email} />
           </div>
 
           <aside className="lg:col-span-5 lg:pl-10 lg:border-l lg:border-ink-200 space-y-12">
@@ -127,32 +63,5 @@ export default function ContactPage() {
         </div>
       </section>
     </>
-  );
-}
-
-function Field({
-  label,
-  name,
-  type = "text",
-  required = false,
-}: {
-  label: string;
-  name: string;
-  type?: string;
-  required?: boolean;
-}) {
-  return (
-    <label className="block">
-      <span className="eyebrow">
-        {label}
-        {required && <span className="text-ink-900"> *</span>}
-      </span>
-      <input
-        type={type}
-        name={name}
-        required={required}
-        className="mt-3 min-h-12 w-full bg-transparent border-b border-ink-300 py-3 text-[15px] text-ink-900 placeholder:text-ink-400 focus:border-ink-900 focus:outline-none"
-      />
-    </label>
   );
 }
