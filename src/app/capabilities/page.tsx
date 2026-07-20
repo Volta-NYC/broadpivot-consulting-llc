@@ -30,7 +30,7 @@ export default function CapabilitiesPage() {
             Six disciplines.
             {" "}
             <span className="italic text-ink-700 leading-[1.1] pb-1 inline-block">
-              One trusted partner.
+              One coordinated approach.
             </span>
           </h1>
 

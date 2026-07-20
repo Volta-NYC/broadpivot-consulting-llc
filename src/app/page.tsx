@@ -154,9 +154,9 @@ export default function Home() {
             <span className="eyebrow">Practice areas</span>
           </div>
           <h2 className="display-sm max-w-3xl">
-            Six disciplines. One trusted
+            Six disciplines. One coordinated
             {" "}
-            <span className="italic text-ink-600">consulting partner.</span>
+            <span className="italic text-ink-600">approach.</span>
           </h2>
           <p className="mt-6 text-ink-600 leading-relaxed max-w-2xl">
             Every engagement receives direct senior-level leadership and
@@ -335,7 +335,7 @@ export default function Home() {
               <h2 className="display-sm max-w-3xl">
                 Discuss your roadmap,
                 {" "}
-                <span className="italic text-ink-600">confidentially.</span>
+                <span className="italic text-ink-600">with clarity.</span>
               </h2>
               <p className="mt-6 text-ink-600 max-w-xl leading-relaxed">
                 Tell us about your environment, organization, and what success looks like.
@@ -356,7 +356,6 @@ export default function Home() {
               {[
                 { label: "Direct", value: "info@broadpivotllc.com", href: "mailto:info@broadpivotllc.com" },
                 { label: "Response time", value: "Within one business day" },
-                { label: "Confidentiality", value: "Inquiries treated confidential by default" },
                 { label: "Location", value: "United States · Remote-first" },
               ].map((item) => (
                 <div key={item.label}>

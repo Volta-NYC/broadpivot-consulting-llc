@@ -98,7 +98,13 @@ export default function Footer() {
             <span className="text-ink-300">·</span>
             <span>Melodye Harvey, Certified Internal Auditor (CIA)</span>
             <span className="text-ink-300">·</span>
-            <span>Confidential by default</span>
+            <Link
+              href="/privacy-policy"
+              className="hover:text-ink-900"
+              style={{ transition: "color 200ms var(--ease-drawer)" }}
+            >
+              Privacy Policy
+            </Link>
             <span className="text-ink-300">·</span>
             <a
               href={site.linkedin}

@@ -25,8 +25,7 @@ export default function ContactPage() {
           </h1>
 
           <p className="lede mt-8 max-w-2xl">
-            Share a few details about your environment and goals. We respond
-            within one business day, confidentially.
+            Share a few details about your environment and goals. We respond within one business day.
           </p>
         </div>
       </section>
@@ -83,6 +82,9 @@ export default function ContactPage() {
                   className="mt-3 min-h-[170px] w-full bg-transparent border-b border-ink-300 py-3 text-[15px] text-ink-900 placeholder:text-ink-400 focus:border-ink-900 focus:outline-none resize-none leading-relaxed"
                   placeholder="Briefly describe your environment, timeline, and what success looks like."
                 />
+                <p className="mt-4 border-l-2 border-accent-warm pl-4 text-[13px] text-ink-600 leading-relaxed">
+                  Please do not submit sensitive personal, financial, health, security, or confidential information through this form.
+                </p>
               </div>
 
               <div className="pt-2 flex items-center gap-6 flex-wrap">
@@ -120,13 +122,6 @@ export default function ContactPage() {
             <div>
               <div className="mono-label">Response</div>
               <p className="mt-3 text-ink-700 text-[15px]">Within one business day.</p>
-            </div>
-            <div>
-              <div className="mono-label">Confidentiality</div>
-              <p className="mt-3 text-ink-700 text-[15px]">
-                Inbound inquiries are treated as confidential by default. NDAs
-                are available on request before substantive discussion.
-              </p>
             </div>
           </aside>
         </div>

@@ -289,9 +289,9 @@ export default function AboutPage() {
       <section className="py-24 lg:py-28">
         <div className="wrap">
           <h3 className="display-sm max-w-2xl">
-            Ready to work with a consulting partner that
+            Ready to turn complex priorities into
             {" "}
-            <span className="italic text-ink-600">actually shows up?</span>
+            <span className="italic text-ink-600">practical progress?</span>
           </h3>
           <p className="mt-6 text-ink-600 max-w-xl leading-relaxed">
             Every engagement is led personally by Melodye Harvey, Certified Internal Auditor (CIA). Reach out to discuss your goals.
