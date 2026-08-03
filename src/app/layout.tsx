@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import { site } from "@/lib/site";
+import { Analytics } from "@vercel/analytics/next";
 
 const sans = Geist({
   subsets: ["latin"],
@@ -57,6 +58,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main id="main" className="flex-1">{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
