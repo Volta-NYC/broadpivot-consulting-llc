@@ -157,7 +157,7 @@ export default function AboutPage() {
                       <span className="text-[13.5px] text-ink-700">Certified Internal Auditor (CIA)</span>
                     </div>
                     <div className="flex items-center gap-3 border border-ink-200 px-4 py-3">
-                      <span className="font-mono text-[11px] font-semibold uppercase tracking-widest" style={{ color: "var(--accent)" }}>Privacy</span>
+                      <span className="font-mono text-[11px] font-semibold uppercase tracking-widest" style={{ color: "var(--accent)" }}>Training</span>
                       <span className="w-px h-4 bg-ink-200" />
                       <span className="text-[13.5px] text-ink-700">Cybersecurity and privacy training</span>
                     </div>

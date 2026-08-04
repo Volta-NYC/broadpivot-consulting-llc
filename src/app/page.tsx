@@ -47,7 +47,7 @@ export default function Home() {
               </div>
 
               <div className="mt-10 flex flex-wrap gap-2">
-                {["Compliance", "Operations", "Nonprofit Governance", "Gov Contracting", "Project Support", "Cybersecurity"].map((tag) => (
+                {["Compliance & Risk", "Business Operations", "Nonprofit Support", "Project Coordination & Construction Support", "Government Contracting", "Cybersecurity & Information Security"].map((tag) => (
                   <span key={tag} className="pill">{tag}</span>
                 ))}
               </div>

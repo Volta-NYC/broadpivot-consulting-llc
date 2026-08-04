@@ -61,7 +61,7 @@ export default function ContactForm({ email }: ContactFormProps) {
           <option value="" disabled>Select one</option>
           <option>Compliance and Risk Management</option>
           <option>Nonprofit Support</option>
-          <option>Project / Construction Management Support</option>
+          <option>Project Coordination &amp; Construction Support</option>
           <option>Government Contracting Support</option>
           <option>General Business Operations Support</option>
           <option>Cybersecurity and Privacy Support</option>

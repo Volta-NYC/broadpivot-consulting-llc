@@ -3,7 +3,7 @@ export const site = {
   shortName: "BroadPivot",
   tagline: "Practical Solutions for Complex Work.",
   description:
-    "BroadPivot Consulting LLC provides practical consulting support across compliance, operations, nonprofit governance, project coordination, construction support, and government-facing work.",
+    "BroadPivot Consulting LLC provides practical consulting support across compliance, operations, nonprofit governance, project coordination and construction support, and government-facing work.",
   domain: "broadpivotllc.com",
   url: "https://broadpivotllc.com",
   email: "info@broadpivotllc.com",
@@ -132,7 +132,7 @@ export const site = {
     {
       figure: "6",
       unit: "practice areas",
-      detail: "Compliance, operations, nonprofit, project coordination, construction support, government contracting, and cybersecurity.",
+      detail: "Compliance and risk, business operations, nonprofit support, project coordination and construction support, government contracting, and cybersecurity.",
     },
   ],
   principles: [

@@ -36,7 +36,7 @@ export default function CapabilitiesPage() {
 
           <p className="lede mt-8 max-w-2xl">
             From compliance program design to nonprofit governance, business operations,
-            project coordination, construction support, cybersecurity, and government-related
+            project coordination and construction support, cybersecurity, and government-related
             work — senior-led consulting by Melodye Harvey, MBA, MSL, CIA.
           </p>
 
@@ -182,8 +182,8 @@ export default function CapabilitiesPage() {
             <span className="italic text-ink-600">We&apos;ll listen first.</span>
           </h3>
           <p className="mt-6 text-ink-600 max-w-xl leading-relaxed">
-            Whether you need compliance support, nonprofit guidance, project coordination,
-            project and construction support, government contracting support, or general
+            Whether you need compliance support, nonprofit guidance, project coordination and
+            construction support, government contracting support, or general
             business operations support — the conversation starts with understanding your goals.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
