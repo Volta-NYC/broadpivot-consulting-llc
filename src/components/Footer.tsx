@@ -84,13 +84,13 @@ export default function Footer() {
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
             <span>© {new Date().getFullYear()} BroadPivot Consulting LLC. All rights reserved.</span>
             <a
-              href={site.voltaUrl}
+              href="https://www.novusnyc.org/"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-ink-900"
+              className="text-[#F6B78D] hover:text-[#F6B78D]"
               style={{ transition: "color 200ms var(--ease-drawer)" }}
             >
-              Made by Volta
+              Made by Novus
             </a>
           </div>
           <div className="flex items-center gap-5">
