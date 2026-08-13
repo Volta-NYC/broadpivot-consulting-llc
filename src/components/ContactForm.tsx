@@ -7,15 +7,18 @@ type ContactFormProps = {
 };
 
 type FormStatus = "idle" | "sending" | "success" | "error";
+type FieldErrors = Partial<Record<"name" | "email" | "phone" | "organization" | "interest" | "message", string>>;
 
 export default function ContactForm({ email }: ContactFormProps) {
   const [status, setStatus] = useState<FormStatus>("idle");
   const [message, setMessage] = useState("");
+  const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setStatus("sending");
     setMessage("");
+    setFieldErrors({});
 
     const form = event.currentTarget;
     const values = Object.fromEntries(new FormData(form));
@@ -26,9 +29,12 @@ export default function ContactForm({ email }: ContactFormProps) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(values),
       });
-      const result = (await response.json()) as { message?: string };
+      const result = (await response.json()) as { message?: string; errors?: FieldErrors };
 
-      if (!response.ok) throw new Error(result.message || "Unable to send your message.");
+      if (!response.ok) {
+        setFieldErrors(result.errors || {});
+        throw new Error(result.message || "Unable to send your message.");
+      }
 
       form.reset();
       setStatus("success");
@@ -42,12 +48,12 @@ export default function ContactForm({ email }: ContactFormProps) {
   return (
     <form className="space-y-11" onSubmit={handleSubmit}>
       <div className="grid gap-y-10 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-0">
-        <Field label="Name" name="name" required />
-        <Field label="Organization" name="organization" />
+        <Field label="Name" name="name" required error={fieldErrors.name} />
+        <Field label="Organization" name="organization" error={fieldErrors.organization} />
       </div>
       <div className="grid gap-y-10 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-0">
-        <Field label="Email" name="email" type="email" required />
-        <Field label="Phone" name="phone" type="tel" />
+        <Field label="Email" name="email" type="email" required error={fieldErrors.email} />
+        <Field label="Phone" name="phone" type="tel" error={fieldErrors.phone} />
       </div>
 
       <div>
@@ -56,6 +62,8 @@ export default function ContactForm({ email }: ContactFormProps) {
           id="interest"
           name="interest"
           defaultValue=""
+          aria-invalid={Boolean(fieldErrors.interest)}
+          aria-describedby={fieldErrors.interest ? "interest-error" : undefined}
           className="mt-3 min-h-12 w-full bg-transparent border-b border-ink-300 py-3 text-[15px] text-ink-900 focus:border-ink-900 focus:outline-none"
         >
           <option value="" disabled>Select one</option>
@@ -67,6 +75,7 @@ export default function ContactForm({ email }: ContactFormProps) {
           <option>Cybersecurity and Privacy Support</option>
           <option>Not sure yet. Let&apos;s discuss.</option>
         </select>
+        {fieldErrors.interest && <p id="interest-error" className="mt-2 text-[13px] text-red-700">{fieldErrors.interest}</p>}
       </div>
 
       <div>
@@ -76,9 +85,12 @@ export default function ContactForm({ email }: ContactFormProps) {
           name="message"
           rows={6}
           required
+          aria-invalid={Boolean(fieldErrors.message)}
+          aria-describedby={fieldErrors.message ? "message-error" : undefined}
           className="mt-3 min-h-[170px] w-full resize-none border-b border-ink-300 bg-transparent py-3 text-[15px] leading-relaxed text-ink-900 placeholder:text-ink-400 focus:border-ink-900 focus:outline-none"
           placeholder="Briefly describe your environment, timeline, and what success looks like."
         />
+        {fieldErrors.message && <p id="message-error" className="mt-2 text-[13px] text-red-700">{fieldErrors.message}</p>}
         <p className="mt-4 border-l-2 border-accent-warm pl-4 text-[13px] leading-relaxed text-ink-600">
           Please do not submit sensitive personal, financial, health, security, or confidential information through this form.
         </p>
@@ -108,7 +120,9 @@ export default function ContactForm({ email }: ContactFormProps) {
   );
 }
 
-function Field({ label, name, type = "text", required = false }: { label: string; name: string; type?: string; required?: boolean }) {
+function Field({ label, name, type = "text", required = false, error }: { label: string; name: keyof FieldErrors; type?: string; required?: boolean; error?: string }) {
+  const errorId = `${name}-error`;
+
   return (
     <label className="block">
       <span className="eyebrow">
@@ -119,8 +133,11 @@ function Field({ label, name, type = "text", required = false }: { label: string
         type={type}
         name={name}
         required={required}
+        aria-invalid={Boolean(error)}
+        aria-describedby={error ? errorId : undefined}
         className="mt-3 min-h-12 w-full border-b border-ink-300 bg-transparent py-3 text-[15px] text-ink-900 placeholder:text-ink-400 focus:border-ink-900 focus:outline-none"
       />
+      {error && <span id={errorId} className="mt-2 block text-[13px] text-red-700">{error}</span>}
     </label>
   );
 }
