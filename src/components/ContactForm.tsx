@@ -38,11 +38,35 @@ export default function ContactForm({ email }: ContactFormProps) {
 
       form.reset();
       setStatus("success");
-      setMessage("Thank you. Your message has been sent.");
+      setMessage("");
     } catch (error) {
       setStatus("error");
       setMessage(error instanceof Error ? error.message : "Unable to send your message.");
     }
+  }
+
+  if (status === "success") {
+    return (
+      <section
+        className="border border-ink-300 bg-paperDeep/50 px-6 py-10 sm:px-10 sm:py-12"
+        role="status"
+        aria-live="polite"
+      >
+        <div className="flex items-center gap-3">
+          <span className="h-px w-8 bg-accent-warm" />
+          <span className="eyebrow">Message received</span>
+        </div>
+        <h2 className="display-sm mt-6 max-w-xl">
+          Thank you for contacting BroadPivot Consulting.
+        </h2>
+        <p className="mt-5 max-w-2xl text-[16px] leading-relaxed text-ink-700">
+          Your message has been received, and we&apos;ll be in touch within 2–3 business days.
+        </p>
+        <button type="button" className="btn-ghost mt-8" onClick={() => setStatus("idle")}>
+          Send another message
+        </button>
+      </section>
+    );
   }
 
   return (

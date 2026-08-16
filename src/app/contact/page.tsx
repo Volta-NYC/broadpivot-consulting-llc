@@ -26,7 +26,7 @@ export default function ContactPage() {
           </h1>
 
           <p className="lede mt-8 max-w-2xl">
-            Share a few details about your environment and goals. We respond within one business day.
+            Share a few details about your environment and goals. We respond within 2–3 business days.
           </p>
         </div>
       </section>
@@ -57,7 +57,7 @@ export default function ContactPage() {
             </div>
             <div>
               <div className="mono-label">Response</div>
-              <p className="mt-3 text-ink-700 text-[15px]">Within one business day.</p>
+              <p className="mt-3 text-ink-700 text-[15px]">Within 2–3 business days.</p>
             </div>
           </aside>
         </div>
