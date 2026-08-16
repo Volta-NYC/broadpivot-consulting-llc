@@ -31,10 +31,10 @@ export default function AboutPage() {
               </h1>
 
               <p className="lede mt-8 max-w-xl">
-                BroadPivot Consulting LLC was created from more than 30 years across
-                compliance, audit, privacy, healthcare, nonprofit governance, operations,
-                cybersecurity, and project support — with one goal: helping organizations
-                move forward with clarity.
+                Melodye Harvey&apos;s professional background spans more than 30 years in
+                compliance, audit, privacy, information security, healthcare, nonprofit
+                governance, and business operations. BroadPivot puts that experience to
+                work with practical clarity.
               </p>
 
               <div className="mt-8 credential-badge inline-flex">
@@ -111,15 +111,15 @@ export default function AboutPage() {
               </div>
               <div className="space-y-6 body-prose">
                 <p className="font-serif text-[1.55rem] sm:text-[1.75rem] text-ink-900 leading-snug tracking-tightish">
-                  BroadPivot was created from more than 30 years of professional experience
-                  across compliance, privacy, audit, information security, healthcare,
-                  nonprofit governance, business operations, cybersecurity, and project support.
+                  Melodye&apos;s professional background is grounded in compliance, audit,
+                  privacy, information security, healthcare, nonprofit governance, and
+                  business operations.
                 </p>
                 <p>
                   Throughout her career, Melodye Harvey has worked with organizations that
                   needed stronger structure, clearer processes, better compliance practices,
-                  and practical support to move initiatives forward. The perspective behind
-                  BroadPivot is rooted in practical solutions for complex work.
+                  and practical support to move initiatives forward. That perspective is
+                  the foundation of BroadPivot&apos;s practical approach to complex work.
                 </p>
                 <p>
                   Many businesses, nonprofits, and public-sector partners have the goals,
@@ -129,10 +129,10 @@ export default function AboutPage() {
                   flexible, strategic, and hands-on consulting support.
                 </p>
                 <p>
-                  The result is a practice prepared to support business operations, compliance
-                  and risk management, nonprofit governance, project coordination, construction
-                  support, and government contracting support — for both small organizations
-                  and larger business opportunities.
+                  As BroadPivot&apos;s practice has grown, its service areas have expanded to
+                  include project coordination and construction support, as well as
+                  government contracting support, alongside compliance, operations, and
+                  nonprofit-focused work.
                 </p>
               </div>
             </div>
@@ -164,7 +164,7 @@ export default function AboutPage() {
                   </div>
                 </div>
                 <div>
-                  <div className="mono-label">Background spans</div>
+                  <div className="mono-label">Melodye&apos;s professional background</div>
                   <ul className="mt-4 space-y-2 text-[14.5px] text-ink-700">
                     {[
                       "Compliance & regulatory affairs",
@@ -174,10 +174,23 @@ export default function AboutPage() {
                       "Healthcare operations",
                       "Nonprofit board leadership",
                       "Business operations",
-                      "General compliance",
-                      "Cybersecurity and privacy training",
-                      "Project and construction support",
+                    ].map((item) => (
+                      <li key={item} className="flex items-center gap-2">
+                        <span className="w-1 h-1 rounded-full flex-shrink-0" style={{ background: "var(--accent-warm)" }} />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <div className="mono-label">BroadPivot practice areas</div>
+                  <ul className="mt-4 space-y-2 text-[14.5px] text-ink-700">
+                    {[
+                      "Compliance, audit, and risk management",
+                      "Business operations and nonprofit support",
+                      "Project coordination & construction support",
                       "Government contracting support",
+                      "Cybersecurity and information security support",
                     ].map((item) => (
                       <li key={item} className="flex items-center gap-2">
                         <span className="w-1 h-1 rounded-full flex-shrink-0" style={{ background: "var(--accent-warm)" }} />

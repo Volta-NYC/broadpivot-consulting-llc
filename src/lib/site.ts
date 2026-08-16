@@ -13,7 +13,7 @@ export const site = {
     name: "Melodye Harvey",
     credential: "MBA, MSL, CIA",
     title: "Principal Consultant & Founder",
-    bio: "Melodye Harvey, MBA, MSL, CIA, is a senior consultant with more than 30 years of experience across compliance, audit, privacy, healthcare, nonprofit governance, operations, cybersecurity, and project support. She founded BroadPivot to bring structure, practical strategy, and hands-on execution support to businesses, nonprofits, project-based teams, construction initiatives, and government-related work.",
+    bio: "Melodye Harvey, MBA, MSL, CIA, is a senior consultant with more than 30 years of experience in compliance, audit, privacy, information security, healthcare, nonprofit governance, and business operations. Through BroadPivot, she provides practical, hands-on support across those areas as well as project and construction support and government contracting support.",
   },
   nav: [
     { label: "About", href: "/about" },

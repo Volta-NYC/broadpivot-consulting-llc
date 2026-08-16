@@ -148,9 +148,9 @@ export default function CapabilitiesPage() {
             <span className="eyebrow">Frameworks & standards</span>
           </div>
           <h2 className="display-sm max-w-3xl">
-            Compliance environments we
+            Frameworks &amp; standards we
             {" "}
-            <span className="italic text-ink-600">routinely operate in.</span>
+            <span className="italic text-ink-600">can support.</span>
           </h2>
           <p className="mt-6 text-ink-600 leading-relaxed max-w-2xl">
             We translate complex requirements into practical controls, documentation,

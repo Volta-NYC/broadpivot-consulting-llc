@@ -2,6 +2,22 @@ import Link from "next/link";
 import Image from "next/image";
 import { site } from "@/lib/site";
 import { BlueprintBackdrop, DarkPlate } from "@/components/Backdrop";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Compliance, Operations & Governance Consulting",
+  description:
+    "BroadPivot provides senior-led consulting for compliance, audit, privacy, information security, healthcare, nonprofit governance, business operations, project support, and government contracting.",
+};
+
+const homepageStandards = [
+  "HIPAA",
+  "SOX",
+  "IIA Standards",
+  "2 CFR Part 200",
+  "FAR / DFARS",
+  "Privacy & data-governance requirements",
+];
 
 export default function Home() {
   return (
@@ -15,10 +31,12 @@ export default function Home() {
 
             {/* LEFT: text content */}
             <div className="pb-20 lg:pb-28 hero-drift">
-              <div className="flex flex-wrap items-center gap-3">
-                <span className="h-px w-10 bg-accent-warm" />
-                <span className="eyebrow">Practical Solutions for Complex Work</span>
-                <span className="credential-badge ml-2">
+              <div className="flex flex-col items-start gap-4">
+                <div className="flex items-center gap-3">
+                  <span className="h-px w-10 bg-accent-warm" />
+                  <span className="eyebrow">Practical Solutions for Complex Work</span>
+                </div>
+                <span className="credential-badge">
                   <span className="credential-badge__text">Certified Internal Auditor (CIA)</span>
                 </span>
               </div>
@@ -90,10 +108,10 @@ export default function Home() {
         <div className="border-t border-ink-200/80 bg-paper/60">
           <div className="wrap py-5 flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
             <div className="hidden md:block mono-label whitespace-nowrap">
-              Selected frameworks
+              Selected standards &amp; requirements
             </div>
             <ul className="framework-strip flex-1">
-              {site.frameworks.slice(0, 8).map((f) => (
+              {homepageStandards.map((f) => (
                 <li key={f}>{f}</li>
               ))}
             </ul>
